@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.jxxy.debug.corekit.widget.RoundConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    app:round_corner="6dp">
+
+    <ImageView
+        android:id="@+id/aIv"
+        app:round_corner_top="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/round_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/view"
+        android:background="@drawable/white_gradient_gray"
+        app:layout_constraintTop_toTopOf="@id/titleTV"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <TextView
+        android:id="@+id/titleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:textColor="@color/text_100"
+        android:letterSpacing="0.1"
+        android:maxLines="1"
+        android:paddingHorizontal="2dp"
+        android:textSize="@dimen/normal_text_size"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/aIv"
+        app:layout_constraintBottom_toTopOf="@+id/timeTV" />
+    <TextView
+        android:paddingLeft="2dp"
+        android:id="@+id/timeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/bg_100"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <TextView
+        android:id="@+id/ipTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/bg_100"
+        app:layout_constraintBottom_toBottomOf="@+id/timeTV"
+        app:layout_constraintLeft_toRightOf="@+id/timeTV"
+        app:layout_constraintTop_toTopOf="@+id/timeTV" />
+</org.jxxy.debug.corekit.widget.RoundConstraintLayout>

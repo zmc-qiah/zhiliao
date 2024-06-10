@@ -1,0 +1,46 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.kapt'
+}
+def MODULE_NAME = "thinkMap"
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+        buildConfigField("String", "TAG", "\"${MODULE_NAME}\"")
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+    implementation group: 'io.github.lucksiege', name: 'pictureselector', version: 'v3.11.1'
+    implementation "androidx.dynamicanimation:dynamicanimation:1.0.0"
+    kapt 'com.google.auto.service:auto-service:1.0-rc6'
+    importDependencies(MODULE_NAME, dependencies)
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+}

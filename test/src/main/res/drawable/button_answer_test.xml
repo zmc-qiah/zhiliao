@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:gravity="top">
+        <rotate
+            android:fromDegrees="45"
+            android:pivotX="50%"
+            android:pivotY="0%">
+            <shape android:shape="rectangle">
+                <solid android:color="#FF0000" /> <!-- 填充颜色，这里使用红色 #FF0000 -->
+            </shape>
+        </rotate>
+    </item>
+
+    <item android:top="30dp"> <!-- 调整 top 属性以控制梯形的高度 -->
+        <!-- 在这里放置您的控件内容 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello, Trapezoid!"
+            android:textColor="#FFFFFF" /> <!-- 文本颜色为白色 #FFFFFF -->
+    </item>
+</layer-list>

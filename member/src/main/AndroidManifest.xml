@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.jxxy.debug.member">
+
+    <application>
+        <activity android:name=".activity.ForumActivity">
+        </activity>
+        <activity
+            android:name=".activity.SettingActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".activity.GroupBankActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".activity.UserDetailActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".activity.PlanActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".activity.WeeklyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.PointsTaskActivity"
+            android:exported="false"
+            android:label="@string/title_activity_points_task" />
+        <activity
+            android:name=".activity.PointsDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ResourcesActiviy"
+            android:exported="false" />
+    </application>
+
+</manifest>

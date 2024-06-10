@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomProgressBar" parent="android:Widget.ProgressBar.Horizontal">
+        <!-- 设置进度条的颜色 -->
+        <item name="android:progressTint">#00CC65</item>
+
+        <!-- 设置进度条的背景颜色 -->
+        <item name="android:progressBackgroundTint">@color/bg_200</item>
+    </style>
+
+    <style name="MyBottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyleWrapper</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="BottomSheetStyleWrapper" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    <style name="PoseProgressBar" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/pose_progress</item>
+    </style>
+    <style name="MultiWaveHeader">
+    </style>
+    <style name="MultiWaveHeader.Wave">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+    <attr name="mwhWaves" format="string|enum">
+        <enum name="MultiWave" value="-1"/>
+        <enum name="PairWave" value="-2"/>
+    </attr>
+    <attr name="mwhShape" format="enum">
+        <enum name="Rect" value="0"/>
+        <enum name="RoundRect" value="1"/>
+        <enum name="Oval" value="2"/>
+    </attr>
+    <declare-styleable name="MultiWaveHeader">
+        <attr name="mwhWaveHeight" format="dimension"/>
+        <attr name="mwhStartColor" format="color"/>
+        <attr name="mwhCloseColor" format="color"/>
+        <attr name="mwhIsRunning" format="boolean"/>
+        <attr name="mwhEnableFullScreen" format="boolean"/>
+        <attr name="mwhColorAlpha" format="fraction|float"/>
+        <attr name="mwhProgress" format="fraction|float"/>
+        <attr name="mwhVelocity" format="fraction|float"/>
+        <attr name="mwhGradientAngle" format="integer"/>
+        <attr name="mwhCornerRadius" format="dimension"/>
+        <attr name="mwhWaves"/>
+        <attr name="mwhShape"/>
+    </declare-styleable>
+</resources>

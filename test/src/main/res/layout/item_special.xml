@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_answer">
+
+
+        <ImageView
+            android:id="@+id/specialIv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/specialQuestionContentsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:text="基础概念"
+            android:textColor="#0a0a0a"
+            android:textSize="@dimen/Big_text_size"
+            android:textStyle="bold"
+            android:letterSpacing="0.2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/BossIv"
+            app:layout_constraintLeft_toLeftOf="@id/BossIv"
+            app:layout_constraintRight_toRightOf="@id/BossIv"/>
+
+        <ImageView
+            android:id="@+id/BossIv"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/imageview_boss"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintWidth_percent="0.6" />
+
+        <ImageView
+            android:id="@+id/doSumIv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="-5dp"
+            android:layout_marginRight="-5dp"
+            android:layout_marginTop="-15dp"
+            android:layout_marginBottom="-5dp"
+            android:scaleType="fitXY"
+            app:layout_constraintLeft_toLeftOf="@id/titleTv"
+            app:layout_constraintRight_toRightOf="@id/titleTv"
+            app:layout_constraintTop_toTopOf="@id/titleTv"
+            app:layout_constraintBottom_toBottomOf="@id/doSumTv"/>
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width= "0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="-10dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="公告"
+            android:visibility="invisible"
+            android:background="@color/bg_200"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/BossIv"
+            app:layout_constraintTop_toTopOf="@id/BossIv"/>
+        <TextView
+            android:id="@+id/doSumTv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="已经有456位勇士挑战过该boss"
+            android:gravity="center"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/titleTv"
+            app:layout_constraintLeft_toLeftOf="@id/titleTv"
+            app:layout_constraintRight_toRightOf="@id/titleTv"
+            app:layout_constraintBottom_toBottomOf="@id/BossIv"
+             />
+
+<!--        <TextView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="0dp"-->
+<!--            app:layout_constraintLeft_toRightOf="@id/BossIv"-->
+<!--            app:layout_constraintRight_toLeftOf="@id/theChartsIcon"-->
+<!--            app:layout_constraintTop_toTopOf="@id/BossIv"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/theBestScoreTv"-->
+
+
+
+        <TextView
+            android:id="@+id/specialCheckTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_check"
+            android:gravity="center"
+            android:letterSpacing="0.1"
+            android:paddingLeft="25dp"
+            android:paddingTop="3dp"
+            android:paddingRight="25dp"
+            android:paddingBottom="3dp"
+            android:text="去讨伐"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/bloodBottomView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+<!--        <org.jxxy.debug.corekit.widget.IconFont-->
+<!--            android:id="@+id/hotIcon"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_marginLeft="5dp"-->
+<!--            android:text="&#xe630;"-->
+<!--            android:textColor="#FF4B4A"-->
+<!--            android:textSize="@dimen/small_text_size"-->
+<!--            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/bloodTrueView"-->
+<!--            app:layout_constraintVertical_bias="0"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/hotTv"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="12sp"-->
+<!--            android:ellipsize="end"-->
+<!--            app:layout_constraintHorizontal_bias="0"-->
+<!--            app:layout_constraintLeft_toRightOf="@+id/hotIcon"-->
+<!--            app:layout_constraintTop_toTopOf="@id/hotIcon"/>-->
+
+        <TextView
+            android:id="@+id/specialQuestionSumTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <View
+            android:id="@+id/bloodBottomView"
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/view_blood_round"
+            app:layout_constraintLeft_toLeftOf="@id/BossIv"
+            app:layout_constraintTop_toBottomOf="@id/BossIv"
+            app:layout_constraintWidth_percent="0.6" />
+
+        <View
+            android:id="@+id/bloodTrueView"
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:background="@drawable/view_blood_true"
+            app:layout_constraintBottom_toBottomOf="@id/bloodBottomView"
+            app:layout_constraintLeft_toLeftOf="@id/bloodBottomView"
+            app:layout_constraintTop_toTopOf="@+id/bloodBottomView"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintWidth_percent="0.6" />
+
+        <TextView
+            android:id="@+id/bloodPercentTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="50%"
+            android:textSize="@dimen/normal_text_size"
+            app:layout_constraintBottom_toBottomOf="@id/bloodBottomView"
+            app:layout_constraintLeft_toRightOf="@+id/bloodBottomView"
+            app:layout_constraintTop_toTopOf="@id/bloodBottomView" />
+
+        <org.jxxy.debug.corekit.widget.IconFont
+            android:id="@+id/theChartsIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="&#x100ad;"
+            android:textColor="#FFD700"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toRightOf="@id/BossIv"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/BossIv" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="排行榜"
+            android:textColor="@color/text_100"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintLeft_toLeftOf="@id/theChartsIcon"
+            app:layout_constraintRight_toRightOf="@id/theChartsIcon"
+            app:layout_constraintTop_toBottomOf="@id/theChartsIcon"
+            app:layout_constraintBottom_toTopOf="@id/theBestScoreIcon"
+            app:layout_constraintVertical_bias="0"/>
+
+        <org.jxxy.debug.corekit.widget.IconFont
+            android:id="@+id/theBestScoreIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="&#xe61d;"
+            android:textColor="#FFD700"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/theBestScoreTv"
+            app:layout_constraintLeft_toRightOf="@id/BossIv"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/theBestScoreTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="最好成绩"
+            android:textColor="@color/text_100"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintBottom_toBottomOf="@id/BossIv"
+            app:layout_constraintLeft_toLeftOf="@+id/theBestScoreIcon"
+            app:layout_constraintRight_toRightOf="@id/theBestScoreIcon" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

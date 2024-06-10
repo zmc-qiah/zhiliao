@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.jxxy.debug.corekit.widget.RoundConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="280dp"
+    android:background="#00FFFFFF"
+    app:round_corner_top_left="10dp"
+    app:round_corner_top_right="10dp"
+    >
+    <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="#f7f7f7"
+        app:round_corner_top_right="20dp"
+        app:round_corner_top_left="20dp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/bottomRv"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginTop="20dp"
+        android:background="#f7f7f7"
+        android:paddingTop="15dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#F7F7F7"
+        app:layout_constraintTop_toBottomOf="@+id/bottomRv">
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:background="#1EABFA"
+            android:text="正确"
+            android:textSize="@dimen/normal_text_size"
+            android:gravity="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:background="#FC656A"
+            android:text="错误"
+            android:textSize="@dimen/normal_text_size"
+            android:gravity="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</org.jxxy.debug.corekit.widget.RoundConstraintLayout>

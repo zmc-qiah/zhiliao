@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="8dp"
+    app:cardMaxElevation="16dp"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/timeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="今天"
+
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/timeTv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="20dp"
+            android:text="日志"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/timeTv"
+            app:layout_constraintStart_toEndOf="@+id/timeTv"
+            app:layout_constraintTop_toTopOf="@+id/timeTv"
+          />
+
+        <org.jxxy.debug.corekit.widget.IconFont
+            android:id="@+id/iconFont6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="56dp"
+
+            android:text="@string/society_more"
+            android:textSize="@dimen/big_icon_size"
+            app:layout_constraintStart_toStartOf="@+id/timeTv"
+            app:layout_constraintTop_toBottomOf="@+id/timeTv" />
+
+        <EditText
+
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@android:color/transparent"
+            android:hint="分享我的动态"
+            android:textColorHint="#95A1AA"
+            android:textSize="@dimen/normal_text_size"
+            app:layout_constraintStart_toStartOf="@+id/timeTv"
+            app:layout_constraintTop_toBottomOf="@+id/timeTv" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/square_grey_edge"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="@dimen/small_text_size"
+            android:text="发布"
+            android:textColor="#95A1AA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iconFont6" />
+
+        <View
+            android:id="@+id/divider11"
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toStartOf="@+id/timeTv2"
+            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintStart_toEndOf="@+id/timeTv"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

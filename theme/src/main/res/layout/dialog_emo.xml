@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.jxxy.debug.corekit.widget.RoundConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:round_corner="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp">
+
+    <org.jxxy.debug.corekit.widget.IconFont
+        android:id="@+id/dialogIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&#xe9a7;"
+        android:textSize="@dimen/mid_icon_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/dialogTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="@dimen/title_text_size"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/dialogIcon"/>
+
+    <ImageView
+        android:id="@+id/dialogIv"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialogTv"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</org.jxxy.debug.corekit.widget.RoundConstraintLayout>

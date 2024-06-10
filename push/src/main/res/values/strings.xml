@@ -1,0 +1,5 @@
+<resources>
+    <string name="component_name">ComponentScaffold</string>
+    <string name="pushModule_cardGotoUse">去使用</string>
+    <string name="pushModule_cardGotoLook">去看看</string>
+</resources>

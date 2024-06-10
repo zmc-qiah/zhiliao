@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.jxxy.debug.corekit.widget.RoundConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp"
+    app:round_corner="8dp"
+    android:background="@drawable/item_weekly5_2">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></View>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2023.7.8获得"
+        android:textSize="@dimen/small_text_size"
+        android:textColor="@color/dark_grey"
+        android:id="@+id/weekly5_date"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+    </TextView>
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="#大睡100天"
+        android:textSize="36sp"
+        android:id="@+id/weekly5_name"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/weekly3_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+    </TextView>
+
+    <org.jxxy.debug.corekit.widget.IconFont
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/getData"
+        android:textSize="108sp"
+        android:textColor="@color/color1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+    </org.jxxy.debug.corekit.widget.IconFont>
+
+
+</org.jxxy.debug.corekit.widget.RoundConstraintLayout>

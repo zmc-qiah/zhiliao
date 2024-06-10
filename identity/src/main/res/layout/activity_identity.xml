@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!-- 标题栏 -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:id="@+id/appBar">
+        <org.jxxy.debug.corekit.widget.CommonToolbar
+            android:layout_width="match_parent"
+            android:layout_marginTop="24dp"
+            android:layout_height="@dimen/toolbar_height"
+            app:titleText="填写信息"
+            app:if_back="true"
+            android:id="@+id/planToolbar"
+            app:layout_constraintTop_toTopOf="parent">
+        </org.jxxy.debug.corekit.widget.CommonToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <!-- 内容部分 -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="59dp"
+        android:background="@color/bg_200"
+    >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/questionRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_white"
+            android:paddingLeft="10dp"
+            android:paddingTop="100dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="50dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tileTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:paddingRight="30dp"
+            android:text="题目"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintStart_toStartOf="@+id/questionRv"
+            app:layout_constraintTop_toBottomOf="@+id/progressTv" />
+
+        <TextView
+            android:id="@+id/progressTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="1/9"
+            android:textSize="@dimen/normal_text_size"
+            app:layout_constraintEnd_toEndOf="@+id/questionRv"
+            app:layout_constraintTop_toTopOf="@+id/questionRv" />
+
+
+
+        <LinearLayout
+
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+
+            app:layout_constraintBottom_toBottomOf="@+id/questionRv"
+            >
+
+            <LinearLayout
+                android:id="@+id/lastproblemLa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingTop="10dp"
+                android:paddingRight="50dp">
+
+                <TextView
+                    android:id="@+id/lastproblemTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="上一页" />
+
+            </LinearLayout>
+            <View
+
+                android:id="@+id/divider4"
+                android:layout_width="1dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="match_parent"
+                android:background="?android:attr/listDivider"
+                app:layout_anchor="@+id/constraintLayout"
+                app:layout_anchorGravity="center" />
+            <LinearLayout
+                android:id="@+id/nextproblemLa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="50dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/nextproblemTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="下一页" />
+
+                <TextView
+                    android:id="@+id/finshTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/round_btn_select"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="完成"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/normal_text_size"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <ProgressBar
+
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:max="8"
+            android:progress="0"
+            style="@style/CustomProgressBarStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

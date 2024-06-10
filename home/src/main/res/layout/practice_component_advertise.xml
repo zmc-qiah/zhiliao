@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/border"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/advertise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/Big_text_size"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/primary100"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+        android:id="@+id/pic_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="10dp"
+        app:round_corner="5dp"
+        app:layout_constraintRight_toLeftOf="@+id/pic_3"
+        app:layout_constraintBottom_toTopOf="@+id/pic_2"
+        app:layout_constraintTop_toBottomOf="@+id/advertise"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <FrameLayout
+            android:id="@+id/frameLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/透白" />
+        </FrameLayout>
+
+        <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="9dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/frameLayout4"
+            app:round_corner="10dp">
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/read_1_1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_text_size"
+                android:textStyle="bold" />
+        </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+    </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+
+    <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+        android:id="@+id/pic_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        app:round_corner="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/pic_3"
+        app:layout_constraintTop_toBottomOf="@+id/pic_1"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <FrameLayout
+            android:id="@+id/frameLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/透白2" />
+        </FrameLayout>
+
+        <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="9dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/frameLayout5"
+            app:round_corner="10dp">
+
+            <TextView
+                android:id="@+id/tv_2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/read_1_1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_text_size"
+                android:textStyle="bold" />
+        </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+    </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+
+    <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+        android:id="@+id/pic_3"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="5dp"
+        app:round_corner="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/advertise"
+        app:layout_constraintLeft_toRightOf="@id/pic_1">
+
+        <FrameLayout
+            android:id="@+id/frameLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/透白" />
+        </FrameLayout>
+
+        <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="9dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/frameLayout6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/frameLayout6"
+            app:round_corner="10dp">
+
+            <TextView
+                android:id="@+id/tv_3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/read_1_1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_text_size"
+                android:textStyle="bold" />
+        </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+    </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

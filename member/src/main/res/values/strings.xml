@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="setting">&#x10127;</string>
+    <string name="getData">&#xe6d5;</string>
+    <string name="incomplete">&#xe6f9;</string>
+    <string name="progress">&#xe600;</string>
+    <string name="fire">&#xe673;</string>
+    <string name="point">&#xe61a;</string>
+    <string name="icon_elliptic">&#xe635;</string>
+    <string name="add">&#xe6cd;</string>
+    <string name="sign">&#xe687;</string>
+    <string name="sumPoint">&#xe638;</string>
+    <string name="dayPoint">&#xe80f;</string>
+    <string name="addPoint">&#xe674;</string>
+    <string name="enter">&#xe8d4;</string>
+    <string name="study_plan">&#xe60b;</string>
+    <string name="study_ddl">&#xe60b;</string>
+    <string name="note">&#xe652;</string>
+    <string name="note_mark">&#xe65d;</string>
+    <string name="group">&#xe696;</string>
+    <string name="like_full">&#xe793;</string>
+    <string name="history">&#xe8bd;</string>
+    <string name="follow">&#xe60d;</string>
+    <string name="groupMessage">&#xe696;</string>
+    <string name="MyMessage">&#xe619;</string>
+    <string name="icon_more">&#xe666;</string>
+    <string name="icon_lock">&#xe658;</string>
+    <string name="url_dowm">https://bucket-lsp.oss-cn-hangzhou.aliyuncs.com/2023/09/08/54cdae54-2d11-4818-aaef-d77ce93170b2.png</string>
+    <string name="url_preview">https://bucket-lsp.oss-cn-hangzhou.aliyuncs.com/2023/09/08/7c0317ac-68dc-4a7d-928a-301cb1b9f736.png</string>
+    <string name="setting_tile_1">\t\t账号</string>
+    <string name="setting_tile_2">\t\t常规</string>
+    <string name="setting_tile_3">\t\t主题</string>
+    <string name="setting_tile_4">\t\t高级</string>
+    <string name="setting_content_1">\t\t\t\t15815436542</string>
+    <string name="setting_content_2">\t\t\t\t切换账号</string>
+    <string name="setting_content_3">\t\t\t\t隐私</string>
+    <string name="setting_content_4">\t\t\t\t地区和语言</string>
+    <string name="setting_content_5">\t\t\t\t权限</string>
+    <string name="setting_content_6">\t\t\t\t清除缓存</string>
+    <string name="setting_content_7">\t\t\t\t浅色</string>
+    <string name="setting_content_8">\t\t\t\t深色</string>
+    <string name="setting_content_9">\t\t\t\t自动</string>
+    <string name="setting_content_10">\t\t\t\t反馈</string>
+    <string name="setting_content_11">\t\t\t\t关于</string>
+    <string name="setting_content_12">\t\t\t\t下载内容</string>
+    <!--    下面的没有用-->
+    <string name="title_activity_points_task">PointsTaskActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_setting">SettingActivity</string>
+</resources>

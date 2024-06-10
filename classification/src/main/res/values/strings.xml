@@ -1,0 +1,20 @@
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="display_all_text">全部</string>
+    <string name="level1">一级分类</string>
+    <string name="level2">二级分类</string>
+
+    <string name="options_comprehensive">综合</string>
+    <string name="options_time">时间</string>
+    <string name="options_temperature">热度</string>
+
+    <string name="date">2023–1–1</string>
+    <string name="title">标题</string>
+    <string name="video_label">视频</string>
+    <string name="author_name">作者名称</string>
+    <string name="read_number">阅读量：1024</string>
+    <string name="like_number">点赞数：1024</string>
+
+</resources>

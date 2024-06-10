@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="setting">&#x906;</string>
+
+    <string name="identity_correct">&#xec9e;</string>
+
+
+
+
+
+    <string name="setting_tile_1">\t\t账号</string>
+    <string name="setting_tile_2">\t\t常规</string>
+    <string name="setting_tile_3">\t\t主题</string>
+    <string name="setting_tile_4">\t\t高级</string>
+    <string name="setting_content_1">\t\t\t\t15815436542</string>
+    <string name="setting_content_2">\t\t\t\t切换账号</string>
+    <string name="setting_content_3">\t\t\t\t隐私</string>
+    <string name="setting_content_4">\t\t\t\t地区和语言</string>
+    <string name="setting_content_5">\t\t\t\t权限</string>
+    <string name="setting_content_6">\t\t\t\t清除缓存</string>
+    <string name="setting_content_7">\t\t\t\t浅色</string>
+    <string name="setting_content_8">\t\t\t\t深色</string>
+    <string name="setting_content_9">\t\t\t\t自动</string>
+    <string name="setting_content_10">\t\t\t\t反馈</string>
+    <string name="setting_content_11">\t\t\t\t关于</string>
+    <string name="setting_content_12">\t\t\t\t下载内容</string>
+
+    <!--    下面的没有用-->
+    <string name="title_activity_points_task">PointsTaskActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+
+</resources>

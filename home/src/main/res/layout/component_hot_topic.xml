@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.jxxy.debug.corekit.widget.RoundConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rc"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:paddingRight="8dp"
+    android:scrollbars="none"
+    android:paddingTop="10dp"
+    android:background="@drawable/border_hot_topic">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:paddingLeft="10dp">
+
+
+        <TextView
+            android:id="@+id/tv_hot_topic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.1"
+            android:text="热门\n话题"
+            android:textColor="@color/primary100"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <org.jxxy.debug.common.widget.MyRecyclerView
+            android:id="@+id/rv_hot_topic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/tv_hot_topic"
+            android:scrollbars="none"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_hot_topic" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</org.jxxy.debug.corekit.widget.RoundConstraintLayout>

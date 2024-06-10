@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="org.jxxy.debug.search"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<application>
+    <activity
+        android:name=".activity.SearchEndActivity"
+        android:exported="false">
+    </activity>
+    <activity
+        android:name=".activity.WikiActivity"
+        android:exported="false">
+    </activity>
+
+    <activity
+        android:name=".activity.ProblemActivity"
+        android:exported="false">
+    </activity>
+<!--
+    <activity
+        android:name=".activity.SearchMiddleActivity"
+        android:exported="false">
+    </activity>-->
+
+    <activity
+        android:name=".activity.SearchMiddleActivity"
+        android:exported="false">
+    </activity>
+</application>
+</manifest>

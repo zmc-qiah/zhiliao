@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/smartRefreshLayout">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:alpha="0">
+    </View>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/commentCL">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/round_grey"
+            android:layout_marginLeft = "20dp"
+            android:layout_marginRight = "20dp"
+            android:id="@+id/commentView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </View>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:id="@+id/phoneET"
+            android:hint="快来留下评论吧"
+            android:gravity="center"
+            android:textSize="@dimen/normal_text_size"
+            android:textColor="@color/black"
+            android:inputType="text"
+            android:background="@color/transparent"
+            app:layout_constraintTop_toTopOf="@id/commentView"
+            app:layout_constraintBottom_toBottomOf="@id/commentView"
+            app:layout_constraintLeft_toLeftOf="@id/commentView"
+            app:layout_constraintRight_toRightOf="@id/commentView">
+        </EditText>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/commentView"
+            android:id="@+id/emptyCommentTextView"
+            android:text="当前没有评论~"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/num_text_size"
+            android:gravity="center">
+        </TextView>
+        <cn.yonghui.hyd.main.ui.cms.activities.seckillactivities.widget.nested.NestedChildRecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/recycleView"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/commentView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+        </cn.yonghui.hyd.main.ui.cms.activities.seckillactivities.widget.nested.NestedChildRecyclerView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

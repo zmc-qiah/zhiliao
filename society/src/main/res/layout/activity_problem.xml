@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light_grey">
+    <EditText
+        android:id="@+id/editText"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="300dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:layout_weight="10"
+        android:background="@drawable/rounded_grey"
+        android:hint="   默认文本"
+        android:textColorHint="#95A1AA"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_weight="1"
+        android:background="@null"
+        android:text="搜索"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/editText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="364dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="85dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_white"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="题型：直线运动问题"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="直线运动问题是高考的热点，可以单独考查，也可以与其他知识综合考查.单独考查若出现在选择题中，则重在考查基本概念，且常与图像结合;在计算题中常出现在第一个小题."
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_white"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+                tools:layout_editor_absoluteX="0dp">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="问题解惑"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="物体在一条直线上运动，且在相等的时间间隔内通过的位移相等，这种运动称为匀速直线运动。做匀速直线运动的物体，在不同的位移或时间段中，位移与时间的比值是一个常数，称为速度，速度的大小直接反映了物体运动的快慢。在匀速直线运动中,平均速度和瞬时速度是一样的,平均速度的大小和平均速率也是相等的,匀速运动的位移和时间成正比,用公式表示为S=vt。作匀速运动的物体加速度为零。
+我们把速度不变的直线运动叫做匀速直线运动，也就是说该物体在任何时间段内通过的路程和时间的比值是个定值。因此，千万不要从数学角度把该公式理解成物体运动的速度与路程成正比，与时间成反比。做匀速直线运动的物体，匀速直线运动的特点是瞬时速度的大小和方向都保持不变，加速度为零，是一种理想化的运动。
+匀速直线运动并不常见，我们可以把一些运动近似地看成是匀速直线运动。如：滑冰运动员停止用力后的一段滑行，站在商场自动扶梯上的顾客的运动，等等。我们可用v=x/t求得他们的运动速度，式中， x为位移，v为速度，它为恒矢量，t为发生位移x所用的时间，由公式可以看出，位移是时间的一次函数，位移与时间成正比。"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/status_bar_height"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <SurfaceView
+        android:id="@+id/surfaceview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="464654654654646"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/raedPhotoToolbar"
+        app:layout_constraintVertical_bias="0.135" />
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="2dp"-->
+<!--        android:background="@color/bg_200"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/raedPhotoToolbar"/>-->
+
+    <ImageView
+        android:id="@+id/readIv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/raedPhotoToolbar"
+        app:layout_constraintHeight_percent="0.65"
+        android:background="@drawable/imageview_ai_draw"
+        android:layout_marginTop="20dp"/>
+
+
+
+        <org.jxxy.debug.corekit.widget.IconFont
+            android:id="@+id/cameraIcon"
+            android:text="&#x10132;"
+            android:textSize="@dimen/mid_icon_size"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="@+id/typeTv"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/typeTv"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintVertical_bias="0.2"
+            app:layout_constraintHorizontal_bias="0.4"/>
+
+        <TextView
+            android:id="@+id/cameraTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/normal_text_size"
+            android:text="切换"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/cameraIcon"
+            app:layout_constraintLeft_toLeftOf="@id/cameraIcon"
+            app:layout_constraintRight_toRightOf="@id/cameraIcon"/>
+
+
+
+
+        <org.jxxy.debug.corekit.widget.IconFont
+            android:id="@+id/photoIcon"
+            android:text="&#xe64f;"
+            android:textSize="@dimen/mid_icon_size"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            app:layout_constraintVertical_bias="0.2"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/typeTv"
+            app:layout_constraintLeft_toRightOf="@+id/typeTv"/>
+
+        <TextView
+            android:id="@+id/photoTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/normal_text_size"
+            android:text="照片"
+            android:textColor="@color/white"
+            app:layout_constraintRight_toRightOf="@id/photoIcon"
+            app:layout_constraintTop_toBottomOf="@+id/photoIcon"
+            app:layout_constraintLeft_toLeftOf= "@+id/photoIcon" />
+
+
+
+    <View
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/textview_type_in"
+        app:layout_constraintTop_toTopOf="@id/typeTv"
+        app:layout_constraintBottom_toBottomOf="@id/typeTv"
+        app:layout_constraintLeft_toLeftOf="@id/typeTv"
+        app:layout_constraintRight_toRightOf="@id/typeTv" />
+    <TextView
+        android:id="@+id/typeTv"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/textview_type"
+        android:gravity="center"
+        android:letterSpacing="0.2"
+        android:textSize="@dimen/Big_text_size"
+        android:textColor="@color/white"
+        app:layout_constraintVertical_bias="0.9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text=""
+        />
+
+
+    <com.debug.myapplication.widget.loading.LVCircularJump
+        android:id="@+id/readLoading"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/nowTypeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:textSize="@dimen/normal_text_size"
+        android:textColor="@color/white"
+        android:text="当前:识图"
+        app:layout_constraintBottom_toTopOf="@id/typeTv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+<!--    <TextView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textSize="@dimen/small_text_size"-->
+<!--        android:text="切换"-->
+<!--        android:gravity="center"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/typeTv"-->
+<!--        app:layout_constraintLeft_toLeftOf="@id/typeTv"-->
+<!--        app:layout_constraintRight_toRightOf="@id/typeTv"/>-->
+
+<!--    <org.jxxy.debug.corekit.widget.IconFont-->
+<!--        android:id="@+id/upIcon"-->
+<!--        android:layout_width="25dp"-->
+<!--        android:layout_height="25dp"-->
+<!--        android:textSize="@dimen/mid_icon_size"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:text="&#xe849;"-->
+<!--        android:gravity="center"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/readIv"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/readRv"-->
+<!--        app:layout_constraintLeft_toRightOf="@id/cameraRl"-->
+<!--        app:layout_constraintVertical_bias="0.2"/>-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textSize="@dimen/normal_text_size"-->
+<!--        android:text="图\n片"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/upIcon"-->
+<!--        app:layout_constraintLeft_toLeftOf="@id/upIcon"-->
+<!--        app:layout_constraintRight_toRightOf="@id/upIcon"-->
+<!--        app:layout_constraintHorizontal_bias="0.8"/>-->
+
+<!--    <org.jxxy.debug.corekit.widget.IconFont-->
+<!--        android:id="@+id/downIcon"-->
+<!--        android:layout_width="25dp"-->
+<!--        android:layout_height="25dp"-->
+<!--        android:textSize="@dimen/mid_icon_size"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        android:text="&#xe848;"-->
+<!--        android:gravity="center"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/readIv"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/readRv"-->
+<!--        app:layout_constraintRight_toLeftOf="@id/photoRl"-->
+<!--        app:layout_constraintVertical_bias="0.8"/>-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textSize="@dimen/normal_text_size"-->
+<!--        android:text="文\n字"-->
+<!--        android:layout_marginBottom="5dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/downIcon"-->
+<!--        app:layout_constraintLeft_toLeftOf="@id/downIcon"-->
+<!--        app:layout_constraintRight_toRightOf="@id/downIcon"-->
+<!--        app:layout_constraintHorizontal_bias="0.8"/>-->
+
+
+    <org.jxxy.debug.corekit.widget.CommonToolbar
+        android:id="@+id/raedPhotoToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/transparent"
+        app:titleText="ai识图"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

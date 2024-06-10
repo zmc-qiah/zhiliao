@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/color_statistic"
+    tools:context=".fragment.activity.StudyPlanActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/studyPlanMain"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="68dp"
+            android:layout_marginTop="12dp"
+            android:text="学习计划"
+            android:gravity="center"
+            android:textSize="24dp"
+            app:layout_constraintHeight_percent="0.6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.6" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/studyPlanNeedTv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="36dp"
+        android:text="今日还需要学习"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studyPlanMain"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <TextView
+        android:id="@+id/studyPlanNeedDataTv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="思政15题\n历史25题\n地理10题"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="#E1FFFF"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studyPlanNeedTv"
+        app:layout_constraintWidth_percent="0.4"/>
+
+
+
+    <TextView
+        android:id="@+id/studyPlanGoalTv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="学习目标"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        app:layout_constraintWidth_percent="0.4"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintTop_toTopOf="@+id/studyPlanNeedTv"
+        app:layout_constraintLeft_toRightOf="@+id/studyPlanNeedTv"/>
+    <TextView
+        android:id="@+id/studyPlanGoalDataTv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="考过四级\n学完地理"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="#E1FFFF"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintLeft_toRightOf="@+id/studyPlanNeedDataTv"
+        app:layout_constraintTop_toBottomOf="@+id/studyPlanGoalTv"
+        app:layout_constraintWidth_percent="0.4"/>
+
+    <TextView
+        android:id="@+id/studyPlanSayingTv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="84dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintWidth_percent="0.9" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

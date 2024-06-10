@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/textLinear"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="15dp"
+    >
+    <androidx.cardview.widget.CardView
+        android:layout_margin="2dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:cardCornerRadius="50dp"
+
+        >
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/optionTv"
+            android:textColor="@color/black"
+            android:textSize="@dimen/normal_text_size"
+            android:text="A"/>
+
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:paddingLeft="20dp"
+        android:id="@+id/contentTv"
+        android:text="选项内容"
+        android:textSize="@dimen/normal_text_size"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <org.jxxy.debug.corekit.widget.IconFont
+        android:id="@+id/correctIcon"
+        android:gravity="right"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:textColor="@color/primary_200"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/small_icon_size"
+        android:text="@string/identity_correct"/>
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 标题栏 -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:id="@+id/appBar">
+        <org.jxxy.debug.corekit.widget.CommonToolbar
+
+            android:layout_width="match_parent"
+            android:layout_marginTop="24dp"
+            android:layout_height="@dimen/toolbar_height"
+            app:titleText="精品课堂"
+            app:if_back="true"
+            android:id="@+id/planToolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_scrollFlags="enterAlways|scroll">
+
+        </org.jxxy.debug.corekit.widget.CommonToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- 内容部分 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/classRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_whiteedgemain"
+        android:padding="10dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

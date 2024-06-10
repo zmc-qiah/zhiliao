@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/border"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    >
+    <TextView
+        android:id="@+id/discovery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/Big_text_size"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/primary100"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/con_13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/discovery">
+
+        <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+            android:id="@+id/con_14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/discovery_title_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:round_corner="6dp">
+
+            <ImageView
+                android:id="@+id/discovery_1"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+
+        <TextView
+            android:id="@+id/discovery_title_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="@string/discovery_1"
+            android:textColor="@color/text_100"
+            android:textSize="@dimen/title_text_size"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/con_14" />
+
+    </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+
+    <LinearLayout
+
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top|center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/con_13">
+
+        <!-- First LinearLayout (con_1) -->
+        <LinearLayout
+            android:paddingBottom="5dp"
+            android:id="@+id/con_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+                android:id="@+id/con_9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:round_corner="3dp">
+
+                <ImageView
+                    android:id="@+id/discovery_title_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp" />
+
+            </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="@string/discovery_1"
+                android:textColor="@color/text_100"
+                android:textSize="@dimen/title_text_size" />
+
+        </LinearLayout>
+
+        <!-- Second LinearLayout (con_2) -->
+        <LinearLayout
+            android:id="@+id/con_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+                android:id="@+id/con_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:round_corner="3dp">
+
+                <ImageView
+                    android:id="@+id/discovery_title_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp" />
+
+            </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+
+            <TextView
+                android:paddingBottom="5dp"
+                android:id="@+id/tv_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:maxLines="2"
+                android:textColor="@color/text_100"
+                android:text="@string/discovery_1"
+                android:textSize="@dimen/title_text_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top|center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <!-- LinearLayout con_3 -->
+        <LinearLayout
+            android:id="@+id/con_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:round_corner="4dp">
+
+            <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+                android:id="@+id/con_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:round_corner="3dp">
+
+                <ImageView
+                    android:id="@+id/discovery_title_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp" />
+
+            </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="@string/discovery_1"
+                android:textColor="@color/text_100"
+                android:textSize="@dimen/title_text_size" />
+
+        </LinearLayout>
+
+        <!-- LinearLayout con_4 -->
+        <LinearLayout
+            android:id="@+id/con_4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:round_corner="4dp">
+
+            <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+                android:id="@+id/con_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:round_corner="3dp">
+
+                <ImageView
+                    android:id="@+id/discovery_title_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp" />
+
+            </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="@string/discovery_1"
+                android:textColor="@color/text_100"
+                android:textSize="@dimen/title_text_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

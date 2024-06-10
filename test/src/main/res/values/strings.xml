@@ -1,0 +1,11 @@
+<resources>
+    <string name="collection_icon_normal">&#xe618;</string>
+    <string name="collection_icon_work">&#xe66a;</string>
+    <string name="error_video">https://bucket-lsp.oss-cn-hangzhou.aliyuncs.com/2023/09/02/3efe0fa1-69d5-49e9-b427-509ea58aa1ed.mp3</string>
+    <string name="right_video">
+        https://bucket-lsp.oss-cn-hangzhou.aliyuncs.com/2023/09/02/1f32047c-ad04-4706-913b-0035f4fbf627.mp3</string>
+    <string name="fail_video">https://bucket-lsp.oss-cn-hangzhou.aliyuncs.com/2023/09/02/e5cfcfa0-474f-41e2-823a-3dbb0e1328c7.mp3</string>
+    <string name="succeed_video">https://bucket-lsp.oss-cn-hangzhou.aliyuncs.com/2023/09/02/8963c87e-cd47-4ec1-9bb7-848a5137c87f.mp3</string>
+
+    <string name="app_name">Game2048</string>
+</resources>

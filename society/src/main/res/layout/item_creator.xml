@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageImg"
+        android:layout_width="109dp"
+        android:layout_height="109dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="title"
+        app:layout_constraintEnd_toEndOf="@+id/imageImg"
+        app:layout_constraintStart_toStartOf="@+id/imageImg"
+        app:layout_constraintTop_toBottomOf="@+id/imageImg" />
+
+    <TextView
+        android:id="@+id/authoridTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="作者"
+        app:layout_constraintEnd_toEndOf="@+id/imageImg"
+        app:layout_constraintStart_toStartOf="@+id/imageImg"
+        app:layout_constraintTop_toBottomOf="@+id/imageImg" />
+
+    <TextView
+        android:layout_width="27dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/rounder_red"
+        android:gravity="center"
+        android:padding="1dp"
+        android:text="up"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/authoridTv"
+        app:layout_constraintEnd_toStartOf="@+id/authoridTv" />
+</androidx.constraintlayout.widget.ConstraintLayout>

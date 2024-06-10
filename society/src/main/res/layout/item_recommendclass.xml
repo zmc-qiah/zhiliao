@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_white"
+    android:orientation="vertical"
+    android:paddingLeft="3dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <ImageView
+        android:id="@+id/imageImg"
+        android:layout_width="103dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="45dp"
+        android:layout_height="17dp"
+        android:background="@drawable/background_extra"
+        android:gravity="center"
+        android:text="精品好课"
+        android:textColor="@color/white"
+        android:textSize="8sp"
+        app:layout_constraintStart_toStartOf="@+id/imageImg"
+        app:layout_constraintTop_toTopOf="@+id/imageImg" />
+
+    <TextView
+        android:id="@+id/textTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="测试内容"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageImg"
+        app:layout_constraintStart_toEndOf="@+id/imageImg" />
+
+    <TextView
+        android:id="@+id/progressTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="《理论最小值：经典力学》"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/imageImg"
+        app:layout_constraintTop_toTopOf="@+id/imageImg" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

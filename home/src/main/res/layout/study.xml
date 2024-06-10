@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginLeft="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+            android:id="@+id/con_7"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:background="@color/primary200"
+            app:round_corner="7dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/con_8">
+
+            <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+                android:id="@+id/con_9"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@id/con_3"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+                    android:id="@+id/con_6"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="18dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/透明"
+                        app:round_corner="10dp">
+
+                        <org.jxxy.debug.corekit.widget.IconFont
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:text="@string/study_icon"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/mid_icon_size"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+                </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+
+                <TextView
+                    android:id="@id/tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/component_5"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/title_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/con_6"
+                    app:layout_constraintStart_toEndOf="@+id/con_6"
+                    app:layout_constraintTop_toTopOf="@+id/con_6" />
+
+                <TextView
+                    android:id="@id/tv_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/study"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/normal_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/con_6" />
+            </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+
+            <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+                android:id="@+id/con_3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/border_study_1"
+                app:round_corner="7dp"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/con_9"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+                    android:id="@+id/rc_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:round_corner="13dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/rc_2">
+
+                    <TextView
+                        android:id="@+id/tv_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="5dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/im_1"
+                        android:text="@string/study_2"
+                        android:textSize="@dimen/small_text_size"
+                        android:textColor="@color/white"/>
+
+                    <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+                        android:id="@+id/con_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:round_corner="6dp"
+                        app:layout_constraintRight_toLeftOf="@+id/con_11"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_3"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+                        <ImageView
+                            android:id="@+id/im_1"
+                            android:background="@color/灰"
+                            android:scaleType="fitXY"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+                    </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+
+                    <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+                        android:id="@+id/con_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:round_corner="6dp"
+                        android:layout_marginLeft="5dp"
+                        app:layout_constraintRight_toLeftOf="@+id/con_12"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_3"
+                        app:layout_constraintLeft_toRightOf="@+id/con_10"
+                        app:layout_constraintBottom_toBottomOf="parent">
+                        <ImageView
+                            android:background="@color/灰"
+                            android:scaleType="fitXY"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+                    </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+
+                    <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+                        android:id="@+id/con_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:round_corner="6dp"
+                        android:layout_marginLeft="5dp"
+                        app:layout_constraintRight_toLeftOf="@+id/con_13"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_3"
+                        app:layout_constraintLeft_toRightOf="@+id/con_11"
+                        app:layout_constraintBottom_toBottomOf="parent">
+                        <ImageView
+                            android:background="@color/灰"
+                            android:scaleType="fitXY"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+                    </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+
+                    <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+                        android:id="@+id/con_13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:round_corner="6dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@color/透明2"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_3"
+                        app:layout_constraintLeft_toRightOf="@+id/con_12"
+                        app:layout_constraintBottom_toBottomOf="parent">
+                        <org.jxxy.debug.corekit.widget.IconFont
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:text="@string/study_icon_2"
+                            android:textColor="@color/white"
+                            android:layout_marginRight="2dp"
+                            android:textStyle="bold"
+                            android:gravity="center_vertical|center_horizontal"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+                    </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+                </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+
+
+
+            </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+
+        </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/con_8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/con_7"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+                android:id="@+id/con_4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="5dp"
+
+                android:background="@drawable/border_4"
+                app:round_corner="9dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/con_5">
+
+                <org.jxxy.debug.corekit.widget.IconFont
+                    android:id="@+id/icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/big_icon_size"
+                    android:textColor="@color/white"
+                    android:text="@string/study_icon_3"
+                    android:layout_marginLeft="5dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="@string/study_tv_1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/title_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@+id/icon"
+                    app:layout_constraintTop_toTopOf="@+id/icon"
+                    />
+
+                <TextView
+                    android:layout_marginRight="3dp"
+                    android:id="@+id/tv_6"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/study_tv_2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/small_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toRightOf="@+id/icon"
+                    app:layout_constraintStart_toStartOf="@+id/tv_5"
+                    app:layout_constraintTop_toBottomOf="@id/tv_5" />
+            </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+
+            <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+                android:id="@+id/con_5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/淡灰"
+
+                app:round_corner="9dp"
+                app:layout_constraintTop_toBottomOf="@id/con_4"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+                    android:id="@+id/con_14"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:round_corner="10dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/border_5"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/con_15"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <org.jxxy.debug.corekit.widget.IconFont
+                        android:id="@+id/icon_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/study_icon_4"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/big_icon_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/study_tv_3"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/normal_text_size"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/icon_2" />
+
+                </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+
+                <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+                    android:id="@+id/con_15"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:round_corner="10dp"
+                    android:layout_marginLeft="3dp"
+                    android:background="@drawable/border_6"
+                    app:layout_constraintLeft_toRightOf="@+id/con_14"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <org.jxxy.debug.corekit.widget.IconFont
+                        android:id="@+id/icon_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/study_icon_5"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/big_icon_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:text="@string/study_tv_4"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="3dp"
+                        android:textSize="@dimen/normal_text_size"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/icon_3"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+            </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

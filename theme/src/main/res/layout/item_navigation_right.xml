@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:elevation="4dp"
+    app:layoutDescription="@xml/scenceitem__theme_right"
+    android:paddingRight="15dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:layout_gravity="right"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:round_corner="6dp"
+        android:padding="6dp"
+        android:background="@color/white"
+        android:id="@+id/bgView">
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:layout_constraintTop_toTopOf="@id/titleTv"
+            app:layout_constraintBottom_toBottomOf="@id/contentTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/logoIV"/>
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/title_text_size"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/logoIV"
+            android:id="@+id/titleTv"/>
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/small_text_size"
+            android:maxLines="2"
+            android:minHeight="30dp"
+            android:gravity="left|top"
+            android:ellipsize="end"
+            android:textColor="#a0000000"
+            app:layout_constraintTop_toBottomOf="@id/titleTv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/logoIV"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/contentTv"/>
+
+    </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

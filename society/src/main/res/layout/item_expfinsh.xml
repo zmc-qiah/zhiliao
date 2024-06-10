@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="8dp"
+    app:cardMaxElevation="16dp"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+
+        >
+
+        <TextView
+            android:id="@+id/timeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="随笔"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/timeTv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="随笔"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/timeTv"
+            app:layout_constraintStart_toEndOf="@+id/timeTv"
+            app:layout_constraintTop_toTopOf="@+id/timeTv"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="12dp"
+
+            android:background="#f7f6f9"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintStart_toStartOf="@+id/timeTv"
+            app:layout_constraintTop_toBottomOf="@+id/timeTv">
+
+
+
+            <ImageView
+                android:id="@+id/expImg"
+                android:layout_width="100dp"
+                android:layout_height="67dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="fitXY"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textTv"
+                app:layout_constraintTop_toBottomOf="@+id/textTv" />
+
+            <org.jxxy.debug.corekit.widget.IconFont
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yinhao"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:text="测试"
+                app:layout_constraintStart_toEndOf="@+id/textView18"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <org.jxxy.debug.corekit.widget.IconFont
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quill"
+            android:textColor="@color/quillcolor"
+            android:textSize="@dimen/mid_icon_size"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout5"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout5">
+
+        </org.jxxy.debug.corekit.widget.IconFont>
+
+        <TextView
+            android:id="@+id/yearTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2023年"
+            android:textColor="#95A1AA"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/monthTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="1dp"
+            android:text="8月"
+            android:textColor="#95A1AA"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@+id/dayTv"
+            app:layout_constraintTop_toTopOf="@+id/yearTv" />
+
+        <TextView
+            android:id="@+id/dayTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="5"
+            android:textColor="#95A1AA"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/yearTv"
+            app:layout_constraintTop_toTopOf="@+id/yearTv" />
+
+        <org.jxxy.debug.corekit.widget.IconFont
+            android:id="@+id/iconFont8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="26dp"
+
+            android:text="@string/like"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/authorhead" />
+
+        <View
+            android:id="@+id/divider13"
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintBottom_toBottomOf="@+id/timeTv"
+            app:layout_constraintStart_toEndOf="@+id/timeTv"
+            app:layout_constraintTop_toTopOf="@+id/timeTv"
+            />
+
+        <org.jxxy.debug.corekit.widget.IconFont
+            android:id="@+id/iconFont7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/society_commend"
+            app:layout_constraintStart_toEndOf="@+id/iconFont8"
+            app:layout_constraintTop_toTopOf="@+id/iconFont8" />
+
+        <ImageView
+            android:id="@+id/authorhead"
+            android:layout_width="44dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout5"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout5" />
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="朱元璋"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/authorhead"
+            app:layout_constraintStart_toEndOf="@+id/authorhead"
+            app:layout_constraintTop_toTopOf="@+id/authorhead" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

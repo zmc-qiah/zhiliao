@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="235dp"
+        android:background="@color/blue">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="35dp"
+            app:contentScrim="@color/blue"
+            android:id="@+id/collapsingToolbarLayout"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="top"
+                android:background="@color/black">
+            </View>
+            <org.jxxy.debug.resources.MyVideoPlayer
+                android:id="@+id/playView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/video_height"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_gravity="center"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white"
+        app:tabIndicatorColor="@color/bule"
+        app:tabIndicatorFullWidth="false"
+        app:tabTextColor="@color/grey"
+        app:tabSelectedTextColor="@color/bule"
+        app:layout_anchor="@id/viewPage"
+        app:layout_anchorGravity="top"
+        android:layout_marginTop="35dp"
+        android:elevation="9dp"
+        android:id="@+id/tabLayout">
+    </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewPage"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+    >
+    </androidx.viewpager2.widget.ViewPager2>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

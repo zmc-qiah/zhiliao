@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/status_bar_height"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/aiGuessTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="你心中的那个人是——"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <ImageView
+        android:id="@+id/aiGuessIv"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="@drawable/imageview_ai_guess"
+        android:layout_marginTop="20dp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintTop_toBottomOf="@id/aiGuessTv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/aiGuessNameTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="30sp"
+        android:text="猜你所想"
+        android:letterSpacing="0.2"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/aiGuessIv"
+        app:layout_constraintLeft_toLeftOf="@id/aiGuessIv"
+        app:layout_constraintRight_toRightOf="@id/aiGuessIv"/>
+
+    <TextView
+        android:id="@+id/aiGuessBeforeTv"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="10dp"
+        android:textSize="24sp"
+        android:text="上次你心中所想的人是——皮卡丘"
+        android:gravity="center"
+        android:background="@color/bg_200"
+        app:layout_constraintTop_toBottomOf="@+id/aiGuessNameTv"
+        app:layout_constraintLeft_toLeftOf="@id/aiGuessIv"
+        app:layout_constraintWidth_percent="0.38"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="105dp"
+        android:background="@color/bg_200"
+        android:text="上次猜测用了7个问题"
+        android:textSize="24sp"
+        android:gravity="center"
+        app:layout_constraintWidth_percent="0.38"
+        app:layout_constraintTop_toTopOf="@id/aiGuessBeforeTv"
+        app:layout_constraintRight_toRightOf="@id/aiGuessIv"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="105dp"
+        android:background="@color/bg_200"
+        android:text="历史猜中比例80%"
+        android:textSize="24sp"
+        android:gravity="center"
+        app:layout_constraintWidth_percent="0.38"
+        app:layout_constraintBottom_toBottomOf="@id/aiGuessBeforeTv"
+        app:layout_constraintRight_toRightOf="@id/aiGuessIv"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

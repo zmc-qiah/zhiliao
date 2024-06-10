@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.jxxy.debug.theme">
+
+    <application>
+        <service android:name=".floatball.service.SuspendWindowService"
+            android:windowSoftInputMode="adjustPan"
+            >
+        </service>
+        <service android:name=".voice.VoiceService"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
+            android:screenOrientation="portrait"
+            >
+        </service>
+        <activity android:name=".activity.ChatDialogActivity"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity android:name=".activity.AiDrawActivity"
+            android:exported="false"/>
+        <activity android:name=".activity.ChatGameActivity"
+            android:exported="false"/>
+
+        <activity android:name=".activity.AiKnowledgeActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:exported="false"/>
+        <activity android:name=".activity.AiAdvGameActivity"
+            android:exported="false"/>
+
+        <activity android:name=".activity.WakeDemo"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity android:name=".activity.IatDemoaaaaaa"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity android:name=".activity.TtsDemo"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity android:name=".posemon.PossMonitorActivity"
+            android:hardwareAccelerated="true">
+        </activity>
+        <activity android:name=".activity.EMODetectorActivity"
+            android:hardwareAccelerated="true">
+        </activity>
+
+        <activity android:name=".activity.OcrActivity"
+            android:exported="false"/>
+        <activity android:name=".activity.ReadPhotoActivity"
+            android:exported="false"/>
+        <activity android:name=".activity.H5Activity"
+            android:exported="false"/>
+
+    </application>
+</manifest>

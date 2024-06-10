@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.jxxy.debug.corekit.widget.RoundConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:round_corner_top="20dp"
+    android:background="@color/white"
+    android:id="@+id/commentBottomSheet"
+    android:elevation="9dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <org.jxxy.debug.corekit.widget.IconFont
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/small_icon_size"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/icon_back"
+        android:layout_margin="12dp"
+        android:id="@+id/commentBackIcon"
+        app:layout_constraintRight_toLeftOf="@id/commentTabLayout"
+        app:layout_constraintBottom_toBottomOf="@id/commentTabLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+    </org.jxxy.debug.corekit.widget.IconFont>
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/white"
+        app:tabTextColor="@color/grey"
+        android:id="@+id/commentTabLayout"
+        app:tabSelectedTextColor="@color/bule"
+        app:tabBackground="@color/transparent"
+        app:tabRippleColor="@color/transparent"
+        app:tabIndicatorColor="@color/transparent"
+        app:layout_constraintLeft_toRightOf="@id/commentBackIcon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/commentViewPage"
+        app:layout_constraintTop_toBottomOf="@id/commentTabLayout"
+        app:layout_constraintBottom_toBottomOf="parent">
+    </androidx.viewpager2.widget.ViewPager2>
+
+</org.jxxy.debug.corekit.widget.RoundConstraintLayout>

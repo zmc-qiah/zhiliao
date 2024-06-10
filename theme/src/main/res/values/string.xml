@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="icon_ball_chat">&#xea94;</string>
+    <string name="icon_again">&#xe640;</string>
+    <string name="icon_modify">&#xe605;</string>
+    <string name="icon_translate">&#xe65c;</string>
+    <string name="icon_cancel">&#xe639;</string>
+    <string name="icon_ball_study">&#xe623;</string>
+    <string name="icon_ball_EQ">&#xe654;</string>
+    <string name="icon_submit">&#xe615;</string>
+    <string name="fast_gpt_appId">64f4b0f6047b3c09e4e79b24</string>
+    <string name="fast_gpt_appId_second">64fe913bd7fb469843982d5e</string>
+    <string name="fast_gpt_apikey">fastgpt-2xs93d25rruxlte7sfeiw8e7</string>
+    <string name="fast_gpt_apikey_second">fastgpt-x48yzz6powc3zluafkqaxu0s</string>
+    <string name="tts_appid">ce27cba9</string>
+    <string name="tts_apiSecret">ZTM5NjdkZTQ1ZWJjNWJjYjM1MTA0YTE3</string>
+    <string name="tts_apiKey">2c68faf9f21a910b6adb7603cd818d8a</string>
+    <string name="ai_music">https://bucket-lsp.oss-cn-hangzhou.aliyuncs.com/%E3%83%9F%E3%83%84%E3%82%AD%E3%83%A8%20-%20Unwelcome%20school.mp3</string>
+    <string name="tfe_pe_app_name">PoseMon</string>
+    <string name="tfe_pe_request_permission">This app needs camera permission.</string>
+    <string name="tfe_pe_tv_score">Score: %.2f</string>
+    <string name="tfe_pe_tv_model">Model: MoveNet Thunder</string>
+    <string name="tfe_pe_tv_fps">Fps: %d</string>
+    <string name="tfe_pe_tv_debug">DEBUG: %s</string>
+    <string name="tfe_pe_tv_device">Device: </string>
+    <string name="tfe_pe_tv_camera">Camera: </string>
+    <string name="theme_ocr">&#xe81e;</string>
+    <string name="theme_paint">&#xe65f;</string>
+    <string name="theme_emo">&#xe665;</string>
+    <string name="theme_pose">&#xe667;</string>
+    <string name="theme_adv">&#xe65e;</string>
+    <string name="theme_na">&#xe648;</string>
+    <string name="theme_kn">&#xe850;</string>
+    <string name="dash_model">qwen-max</string>
+    <string name="dash_key">sk-f472eda122a8411dac7dab7ee0a9eef0</string>
+
+    <string-array name="tfe_pe_device_name">
+        <item>CPU</item>
+        <item>GPU</item>
+        <item>NNAPI</item>
+    </string-array>
+
+    <string-array name="tfe_pe_camera_name">
+        <item>Back</item>
+        <item>Front</item>
+    </string-array>
+
+    <string name="forwardhead_confirm">当前脖子前伸,请及时调整</string>
+    <string name="forwardhead_not_confirm">疑似正在脖子前伸</string>
+    <string name="crossleg_confirm">当前正在跷二郎腿,请及时调整</string>
+    <string name="crossleg_not_confirm">疑似正在跷二郎腿</string>
+    <string name="standard">当前坐姿标准请接续保持</string>
+    <string name="no_target">未检测到人物信息</string>
+    <string name="icon_change_camera">&#xe660;</string>
+    <string name="icon_elliptic">&#xe635;</string>
+    <color name="bad_pose_cnt">#6C52F1</color>
+    <color name="good_pose_time">#F58150</color>
+    <color name="good_pose">#00CC65</color>
+    <color name="bad_pose">#FC656A</color>
+    <string name="icon_sumary">&#xe644;</string>
+    <string name="app_id">ce27cba9</string>
+    <string name="url_close">
+        https://bucket-lsp.oss-cn-hangzhou.aliyuncs.com/2023/09/07/28e6b76e-7e8d-4025-829e-5bda42be904c.png
+    </string>
+
+    <string name="text_begin">请开始说话&#8230;</string>
+    <string name="text_begin_recognizer">开始音频流识别</string>
+    <string name="text_upload_contacts">上传联系人</string>
+    <string name="text_upload_userwords">上传用户词表</string>
+    <string name="text_upload_success">上传成功</string>
+    <string name="text_userword_empty">词表下载失败或内容为空</string>
+    <string name="text_download_success">下载成功</string>
+    <string name="pref_key_iat_show">iat_show</string>
+    <string name="pref_title_iat_show">显示听写界面</string>
+
+    <string name="pref_key_translate">translate</string>
+    <string name="pref_title_translate">翻译</string>
+
+    <string name="ai_knowledge_type1">请输入要存入的内容</string>
+    <string name="ai_knowledge_type2">请输入要问的问题</string>
+    <string name="url_logo">
+        https://bucket-lsp.oss-cn-hangzhou.aliyuncs.com/2023/09/09/54016fbc-4c23-40c5-ae16-7845c799f8c3.png
+    </string>
+    <string name="url_note_top_right">
+        https://bucket-lsp.oss-cn-hangzhou.aliyuncs.com/2023/09/09/a8a76e2f-5c79-43ec-99e0-e3c10643734f.jpg
+    </string>
+    <string name="url_study_top_right">
+https://bucket-lsp.oss-cn-hangzhou.aliyuncs.com/2023/09/09/848f913f-25a4-4612-a546-cccff373b1b7.jpg
+    </string>
+    <string name="url_translate_top_right">
+    </string>
+
+    <string name="theme_ocr_name">图文识别</string>
+    <string name="theme_paint_name">神笔马良</string>
+    <string name="theme_kn_name">知识库</string>
+    <string name="theme_na_name">百宝箱</string>
+    <string name="theme_adv_name">秘闻绘卷</string>
+    <string name="theme_pose_name">坐姿守护</string>
+    <string name="theme_emo_name">心灵港湾</string>
+    <string name="emo_a">&#xe8ac;</string>
+    <string name="emo_u">&#xe655;</string>
+    <string name="emo_s">&#xe8a7;</string>
+    <string name="emo_n">&#xe636;</string>
+    <string name="emo_h">&#xe9a7;</string>
+</resources>

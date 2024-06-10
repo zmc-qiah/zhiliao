@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/planCardIv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:textSize="@dimen/big_icon_size"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/planCardTitleTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/common_text_main_black"
+            android:textSize="@dimen/normal_text_size"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:layout_constraintLeft_toRightOf="@id/planCardIv"
+            app:layout_constraintTop_toTopOf="@id/planCardIv"
+            app:layout_constraintRight_toLeftOf="@id/planCardBtn"
+            tools:text = ""/>
+        <TextView
+            android:id="@+id/beginTimeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="9sp"
+            android:textColor="#a0000000"
+            android:layout_marginRight="5dp"
+            app:layout_constraintTop_toBottomOf="@id/planCardContentTv"
+            app:layout_constraintLeft_toLeftOf="@id/planCardContentTv"
+            tools:text="from 2023-12-12"/>
+        <TextView
+            android:id="@+id/endTimeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="9sp"
+            android:textColor="#a0000000"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintTop_toTopOf="@id/beginTimeTv"
+            app:layout_constraintLeft_toRightOf="@+id/beginTimeTv"
+            tools:text="to      2023-12-12"/>
+
+        <TextView
+            android:id="@+id/planCardContentTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:textColor="@color/common_text_sub_black"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="@id/planCardTitleTv"
+            app:layout_constraintRight_toLeftOf="@id/planCardBtn"
+            app:layout_constraintTop_toBottomOf="@+id/planCardTitleTv"
+            tools:text="学习计划为12313213223324545" />
+
+        <TextView
+            android:id="@+id/planCardBtn"
+            android:layout_width="54dp"
+            android:layout_height="28dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:textColor="@color/common_text_main_black"
+            android:text="去查看"
+            android:background="@drawable/button_background"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintTop_toTopOf="@id/planCardTitleTv"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/planCardContentTv"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>

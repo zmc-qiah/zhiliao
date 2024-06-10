@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.jxxy.debug.corekit.widget.RoundConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#F7F7F7"
+    app:round_corner_top_left="2dp"
+    app:round_corner_top_right="5dp"
+    app:round_corner_bottom_left="5dp"
+    app:round_corner_bottom_right="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/interVideoIv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/interVideoTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="@dimen/normal_text_size"
+        android:textColor="@color/white"
+        android:background="@drawable/textview_inter_video"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        app:layout_constraintLeft_toLeftOf="@id/interVideoIv"
+        app:layout_constraintTop_toTopOf="@id/interVideoIv"
+        tools:text="简单"/>
+
+</org.jxxy.debug.corekit.widget.RoundConstraintLayout>

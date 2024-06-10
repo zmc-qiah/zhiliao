@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="light_purple">#40BB86FC</color>
+<!--    <color name="color1">#E1DBE9</color>-->
+<!--    <color name="color2">#F5C386</color>-->
+<!--    <color name="color3">#9CBCE3</color>-->
+<!--    <color name="color4">#B1CAA2</color>-->
+    <color name="grey_light">#f7f6f6</color>
+    <color name="red_range">#F33A22</color>
+    <color name="golden_range">#f4ea2a</color>
+    <color name="Cu_range">#ea9518</color>
+    <color name="red_tag">#FA4208</color>
+    <color name="white">#ffffff</color>
+    <color name="pink">#fdc0af</color>
+    <color name="orange">#F4A460</color>
+    <color name="searchgrey">#f3f3f3</color>
+    <color name="pink2">#f8d3c9</color>
+    <color name="IDpink">#ff669a</color>
+    <color name="green_answer">#fcf9ef</color>
+    <color name="blue_tag">#4a80b4</color>
+    <color name="orange_year">#fe662c</color>
+    <color name="orange_line">#FB5617</color>
+    <color name="light_white">#f9f9f9</color>
+    <color name="light_white_deep">#F3F1F1</color>
+    <color name="start_taobao">#e6ecf5</color>
+    <color name="end_taobao">#e2e7e5</color>
+    <color name="search_history">#f2f2f4</color>
+    <color name="end_grey">#f8f8f8</color>
+    <color name="search_end_grey">#f4f4f9</color>
+    <color name="search_middle_left_blue">#7CB9F8</color>
+    <color name="search_middle_left_tag">#EAF3FB</color>
+</resources>

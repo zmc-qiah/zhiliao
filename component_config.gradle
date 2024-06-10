@@ -1,0 +1,199 @@
+// component_config.gradle
+// Closure闭包可以理解为Kotlin中的高阶函数，用于在遍历Item的子级依赖时进行相应操作
+def findComponent(def moduleName, def closure) {
+    def component = Components.find {
+        // 根据project匹配处理Item
+        return it.module == moduleName
+    }
+    if (component && (component.dependencies || component.apiDependencies)) {
+        println("║ [${component.module}]---has dependencies:${if (component.dependencies) "normal{${component.dependencies}}" else ""} ${if (component.apiDependencies) "api{${component.apiDependencies}}" else ""}")
+        // 这块其实可以合并，但比较多，就懒得改配置了，大家可以根据需要自行改造配置的数据结构
+        component.dependencies.each { item ->
+            // 根据index，获取子级依赖，当然也可以参照 Components.find 进行匹配获取
+            def dependency = Components.get(item)
+            // 0、1是依赖模式，0为implementation，1为api
+            // 由于该方法闭包在两个主要脚本中均使用，所以一旦调整参数，均需修改
+            closure(dependency, 0)
+        }
+        component.apiDependencies.each { item ->
+            def dependency = Components.get(item)
+            closure(dependency, 1)
+        }
+    }
+    // 对于有需要自己做独立操作的，return出去
+    return component
+}
+// DependencyHandler就是build.gradle(:module)中的dependencies的函数体对象，对于gradle中的配置项应均理解为函数调用
+def importDependencies(def moduleName, DependencyHandler dependencyHandler) {
+    println "╔════════════════Build Script 【${moduleName}】 Start════════════════╗"
+    findComponent(moduleName) {
+        dependency, mode ->
+            // 取到对于module后进行依赖导入
+            def path
+            def des
+            // 这里是local和remote的path拼接
+            if (dependency.localEnable) {
+                path = project(":${dependency.module}")
+                des = "is localed,is imported ${dependency.localPath ?: "in project"}"
+            } else {
+                def remote = "${dependency.version}${dependency.snapshot ? '-SNAPSHOT' : ''}"
+                path = ("${dependency.group}:${dependency.module}:$remote")
+                des = "is remoted,version:$remote"
+            }
+            println "║  └————component:[${dependency.module}] $des"
+            if (mode == 1) {
+                // 区分依赖模式
+                dependencyHandler.api path
+            } else {
+                dependencyHandler.implementation path
+            }
+    }
+    println "╚════════════════Build Script 【${moduleName}】   End════════════════╝"
+}
+// 通过includes识别主模块，进行导入
+def includeComponents() {
+    def rootModule = Components.find {
+        it.includes
+    }
+    if (rootModule) {
+        println "╔════════════════Setting Script 【${rootModule.module}】 Start════════════════"
+        // 对主module单独include
+        include ":${rootModule.module}"
+        rootModule.includes.each { index ->
+            def dependency = Components.get(index)
+            if (dependency.localEnable) {
+                // localPath区分本地非项目中依赖，和项目中依赖
+                if (dependency.localPath) {
+                    def local = "${dependency.localPath}"
+                    println("║  └————enable local dependency:[${dependency.module}],path:$local")
+                    include ":${dependency.module}"
+                    project(":${dependency.module}").projectDir = new File(parentPath.toFile(), local)
+                } else {
+                    println("║  └————enable local dependency:[${dependency.module}],path:in project")
+                    include ":${dependency.module}"
+                }
+            }
+        }
+        println "╚════════════════Setting Script 【${rootModule.module}】   End════════════════"
+    } else {
+        println "can not find any root Module with 'includes' tag"
+    }
+}
+
+
+ext {
+    COMPONENT_GROUP = 'org.jxxy.debug'
+    Components = [
+            [
+                    index      : 0,
+                    module     : 'corekit',
+                    group      : COMPONENT_GROUP,
+                    snapshot   : true,
+                    version    : '1.0.0.35',
+                    localEnable: true,
+            ],
+            [
+                    index          : 1,
+                    module         : 'common',
+                    localEnable    : true,
+                    apiDependencies: [0],
+            ],
+            [
+                    index       : 2,
+                    module      : 'member',
+                    localEnable : true,
+                    dependencies: [1],
+            ],
+            [
+                    index       : 3,
+                    module      : 'resources',
+                    localEnable : true,
+                    dependencies: [1],
+            ],
+            [
+                    index       : 4,
+                    module      : 'home',
+                    localEnable : true,
+                    dependencies: [1],
+            ],
+            [
+                    index       : 5,
+                    module      : 'test',
+                    localEnable : true,
+                    dependencies: [1],
+            ],
+            [
+                    index       : 6,
+                    module      : 'app',
+                    localEnable : true,
+                    dependencies: [1, 2, 3, 4, 5,7,8,9,10,11,12,13,14,15,16],
+                    // 主模块的需要设置includes标签，以进行include，同时也是主入口的标志
+                    includes    : [0, 1, 2, 3, 4, 5,7,8,9,10,11,12,13,14,15,16]
+            ],
+            [
+                    index       : 7,
+                    module      : 'search',
+                    localEnable : true,
+                    dependencies: [1]
+            ],
+            [
+                    index       : 8,
+                    module      : 'login',
+                    localEnable : true,
+                    dependencies: [1]
+            ],
+            [
+                    index       : 9,
+                    module      : 'society',
+                    localEnable : true,
+                    dependencies: [1]
+            ],
+            [
+                    index       : 10,
+                    module      : 'classification',
+                    localEnable : true,
+                    dependencies: [1]
+            ],
+            [
+                    index       : 11,
+                    module      : 'h5',
+                    localEnable : true,
+                    dependencies: [1]
+            ],
+            [
+                    index       : 12,
+                    module      : 'theme',
+                    localEnable : true,
+                    dependencies: [1,16]
+            ],
+            [
+                    index       : 13,
+                    module      : 'thinkMap',
+                    localEnable : true,
+                    dependencies: [1]
+            ],
+            [
+                    index       : 14,
+                    module      : 'push',
+                    localEnable : true,
+                    dependencies: [1]
+            ],
+            [
+                    index       : 15,
+                    module      : 'identity',
+                    localEnable : true,
+                    dependencies: [1]
+            ],
+            [
+                    index       : 16,
+                    module      : 'openCV',
+                    localEnable : true,
+            ]
+
+
+    ]
+    parentPath = rootProject.projectDir.parentFile.toPath()
+
+    includeComponents = this.&includeComponents
+    importDependencies = this.&importDependencies
+}

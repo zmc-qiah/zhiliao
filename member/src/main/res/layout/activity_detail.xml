@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.jxxy.debug.corekit.widget.RoundConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_200"
+    android:paddingTop="35dp">
+    <org.jxxy.debug.corekit.widget.CommonToolbar
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        app:titleText="我的资料"
+        android:id="@+id/detailToolbar"
+        >
+    </org.jxxy.debug.corekit.widget.CommonToolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/detailToolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/listRecyclerView">
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</org.jxxy.debug.corekit.widget.RoundConstraintLayout>

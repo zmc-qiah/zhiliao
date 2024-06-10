@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_white"
+    android:paddingTop="3dp"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    android:paddingBottom="11dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:text="学习笔记展示"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <org.jxxy.debug.corekit.widget.IconFont
+            android:id="@+id/iconFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:text="@string/notebook"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <HorizontalScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="122dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/notebookImg1"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                 />
+
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/notebookImg2"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                 />
+
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/notebookImg3"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                 />
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/notebookImg4"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                 />
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/notebookImg5"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+               />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layoutDescription="@xml/scence_fragment_theme">
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:id="@+id/authorImageView"
+        app:layout_constraintLeft_toLeftOf="parent">
+    </View>
+<!--    <org.jxxy.debug.theme.themeInterface.MyColorAnimationView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="#802C07"-->
+<!--        android:visibility="invisible"-->
+<!--        android:id="@+id/bgView"/>-->
+    <org.jxxy.debug.theme.themeInterface.MyBgView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/newBgView"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/themeRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/fillView"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/themeRv"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <com.yarolegovich.discretescrollview.DiscreteScrollView
+        android:id="@+id/dsv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/normal_text_size"
+        android:textColor="@color/black"
+        android:id="@+id/switchText">
+    </TextView>
+    <com.suke.widget.SwitchButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switchButton"
+        app:sb_checked_color="@color/primary_200"
+        >
+    </com.suke.widget.SwitchButton>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

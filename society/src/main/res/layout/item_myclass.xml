@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_white"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/background_myclass"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageImg"
+            android:layout_width="103dp"
+            android:layout_height="70dp"
+
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="50%"
+            android:textColor="@color/end_green"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageImg"
+            app:layout_constraintStart_toEndOf="@+id/imageImg" />
+
+
+        <TextView
+            android:id="@+id/progressTv"
+            android:layout_width="169dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="《理论最小值：经典力学》"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/imageImg"
+            app:layout_constraintTop_toTopOf="@+id/imageImg" />
+
+        <View
+            android:id="@+id/divider7"
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:layout_marginStart="12dp"
+            android:background="@color/end_green"
+            app:layout_constraintBottom_toBottomOf="@+id/textTv"
+            app:layout_constraintStart_toEndOf="@+id/textTv"
+            app:layout_constraintTop_toTopOf="@+id/textTv"
+           />
+
+        <View
+            android:visibility="gone"
+            android:id="@+id/divider8"
+            android:layout_width="20dp"
+            android:layout_height="3dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintBottom_toBottomOf="@+id/divider7"
+            app:layout_constraintStart_toEndOf="@+id/divider7"
+            app:layout_constraintTop_toTopOf="@+id/divider7" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <org.jxxy.debug.corekit.widget.IconFont
+                android:id="@+id/iconFont"
+                android:layout_marginTop="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/society_score"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="成绩分析" />
+
+        </LinearLayout>
+        <View
+            android:id="@+id/divider9"
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="24dp"
+            android:background="?android:attr/listDivider" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <org.jxxy.debug.corekit.widget.IconFont
+                android:id="@+id/iconFont2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/society_progress" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="作业进度" />
+
+        </LinearLayout>
+        <View
+            android:id="@+id/divider10"
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="24dp"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <org.jxxy.debug.corekit.widget.IconFont
+                android:layout_marginTop="1dp"
+                android:id="@+id/iconFont3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/society_problem" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="问答" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

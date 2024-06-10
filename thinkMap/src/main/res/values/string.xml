@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="edit_and_dragging"/>
+    <item type="id" name="item_holder"/>
+    <item type="id" name="the_hit_target"/>
+    <item type="id" name="target_location_on_viewport"/>
+    <item type="id" name="relative_locations"/>
+    <item type="id" name="node_pre_location"/>
+    <item type="id" name="node_delta_location"/>
+    <item type="id" name="node_final_location"/>
+    <item type="id" name="target_node"/>
+    <item type="id" name="mark_remove_views"/>
+    <item type="id" name="node_trans_animator"/>
+    <item type="id" name="target_node_final_location"/>
+    <color name="debug_container_color">#E1BEE7</color>
+    <color name="purple">#6C52F1</color>
+    <color name="orange">#F58150</color>
+    <string name="full_screen">&#xe73a;</string>
+    <string name="cancel_full_screen">&#xe73b;</string>
+    <string name="url_quote">https://bucket-lsp.oss-cn-hangzhou.aliyuncs.com/2023/09/08/64926cfd-22e7-470b-a3ba-773fb48ebe18.png</string>
+    <string name="url_lock">
+https://bucket-lsp.oss-cn-hangzhou.aliyuncs.com/2023/09/10/e6afbd63-80f7-41af-a53c-e0f58a1eb891.png
+    </string>
+    <string name="url_unlock">
+https://bucket-lsp.oss-cn-hangzhou.aliyuncs.com/2023/09/10/f95270eb-aae0-4c79-abd8-e1b5035da3cf.png
+    </string>
+    <string name="url_save">
+https://bucket-lsp.oss-cn-hangzhou.aliyuncs.com/2023/09/10/c566f8ed-6865-47e4-9b33-9c1880500df6.png
+    </string>
+    <string name="default_edit_text">
+        "记录灵光瞬间"
+    </string>
+    <color name="gradientMostlyCloudy_c3">#f3e5d2</color>
+
+</resources>

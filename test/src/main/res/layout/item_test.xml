@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="340dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+        android:id="@+id/answerRl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/all_round"
+        app:round_corner="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/interVideoGameRl"
+        app:layout_constraintTop_toTopOf="@+id/interVideoGameRl"
+        app:layout_constraintWidth_percent="0.44"
+        app:layout_constraintHeight_percent="0.29">
+
+        <ImageView
+            android:id="@+id/answerIv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.75" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="每日答题"
+            android:textColor="#C0000000"
+            android:textSize="@dimen/normal_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="@+id/answerIv"
+            app:layout_constraintRight_toRightOf="@+id/answerIv"
+            app:layout_constraintBottom_toTopOf="@id/answerIv"
+            app:layout_constraintVertical_bias="0.3" />
+    </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+
+
+
+    <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+        android:id="@+id/testRl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:round_corner="8dp"
+        android:background="@drawable/all_round"
+        app:layout_constraintRight_toRightOf="@+id/answerRl"
+        app:layout_constraintBottom_toBottomOf="@+id/interVideoGameRl"
+        app:layout_constraintWidth_percent="0.44"
+        app:layout_constraintHeight_percent="0.29">
+
+        <ImageView
+            android:id="@+id/testIv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.75" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="怪兽猎人"
+            android:textSize="@dimen/normal_text_size"
+            android:textColor="#C0000000"
+            android:textStyle="bold"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="@+id/testIv"
+            app:layout_constraintRight_toRightOf="@+id/testIv"
+            app:layout_constraintBottom_toTopOf="@id/testIv"
+            app:layout_constraintVertical_bias="0.3"
+            app:layout_constraintHorizontal_bias="0.5"/>
+    </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+
+    <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+        android:id="@+id/interVideoGameRl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/all_round"
+        app:round_corner="12dp"
+        app:layout_constraintHeight_percent="0.6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/answerRl"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.44" >
+
+        <ImageView
+            android:id="@+id/interVideoGameIv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.8"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/interVideoGameTv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textColor="#c0000000"
+            android:text="探索谜题"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="@dimen/Big_text_size"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+
+    <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+        android:id="@+id/pkRl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:round_corner="8dp"
+        android:background="#FFFFFF"
+        app:layout_constraintHeight_percent="0.37"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/interVideoGameRl"
+        app:layout_constraintRight_toRightOf="@id/answerRl">
+
+        <TextView
+            android:id="@+id/pkTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="谁是学霸"
+            android:textColor="#c0000000"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/pkIv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/pkTv"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+    </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

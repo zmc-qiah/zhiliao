@@ -1,0 +1,56 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.kapt'
+}
+def MODULE_NAME = "common"
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+        buildConfigField("String", "TAG", "\"${MODULE_NAME}\"")
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+    importDependencies(MODULE_NAME, dependencies)
+    implementation 'com.alibaba:dashscope-sdk-java:2.14.4'
+    // api可以被间接导入
+    api 'com.github.DingMouRen:LayoutManagerGroup:1e6f4f96eb'
+    api "androidx.dynamicanimation:dynamicanimation:1.0.0"
+    api group: 'io.github.lucksiege', name: 'pictureselector', version: 'v3.11.1'
+    api ('com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer:v8.1.9-release-jitpack'){
+        exclude group: 'androidx.appcompat'
+        exclude group: 'androidx.core'
+    }
+    implementation 'com.github.chrisbanes:PhotoView:2.2.0'
+    kapt 'com.google.auto.service:auto-service:1.0-rc6'
+    api 'com.google.auto.service:auto-service-annotations:1.0-rc6'
+    // https://mvnrepository.com/artifact/androidx.constraintlayout/constraintlayout
+    runtimeOnly group: 'androidx.constraintlayout', name: 'constraintlayout', version: '2.1.2'
+    importDependencies(MODULE_NAME, dependencies)
+}

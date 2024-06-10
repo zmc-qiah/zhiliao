@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:clickable="true"
+    android:foreground="@drawable/button_press"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:background="@drawable/round_background"
+        app:layout_constraintTop_toTopOf="@+id/optionBtn"
+        app:layout_constraintBottom_toBottomOf="@+id/optionBtn"
+        app:layout_constraintLeft_toLeftOf="@+id/optionBtn"
+        app:layout_constraintRight_toRightOf="@+id/optionBtn"/>
+    <TextView
+        android:id="@+id/optionBtn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/button_option_normal"
+        android:gravity="center"
+        android:textColor="#0A0A0A"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/optionTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="7dp"
+        android:paddingTop="7dp"
+        android:paddingRight="7dp"
+        android:paddingBottom="7dp"
+        android:textColor="#050505"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.804"
+        app:layout_constraintLeft_toRightOf="@+id/optionBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.8" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

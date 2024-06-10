@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_fall"
+    android:paddingHorizontal="3dp"
+    android:paddingBottom="7dp"
+    app:round_corner="5dp">
+
+    <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+        android:id="@+id/con_12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:round_corner_top_left="6dp"
+        app:round_corner_top_right="6dp">
+
+        <ImageView
+            android:id="@+id/video_cover"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@color/white_grey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/video_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:textColor="@color/text_100"
+        android:letterSpacing="0.1"
+        android:paddingHorizontal="2dp"
+        android:text="@string/fall"
+        android:textSize="@dimen/normal_text_size"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="@+id/con_12"
+        app:layout_constraintTop_toBottomOf="@+id/con_12" />
+
+
+    <TextView
+        android:paddingLeft="2dp"
+        android:id="@+id/video_tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fall_1"
+        android:textColor="@color/text_200"
+        android:textSize="@dimen/small_text_size"
+
+        app:layout_constraintStart_toStartOf="@+id/video_tv"
+        app:layout_constraintTop_toBottomOf="@+id/video_tv" />
+
+    <TextView
+
+        android:paddingLeft="2dp"
+        android:id="@+id/video_tv_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2023.5.23 · 海南"
+        android:textColor="@color/浅黑2"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/video_tv_2"
+        app:layout_constraintTop_toBottomOf="@id/video_tv_2" />
+
+    <TextView
+        android:id="@+id/video_tv_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/浅黑2"
+        app:layout_constraintBottom_toBottomOf="@+id/video_tv_3"
+        app:layout_constraintLeft_toRightOf="@+id/video_tv_3"
+        app:layout_constraintTop_toTopOf="@+id/video_tv_3" />
+</androidx.constraintlayout.widget.ConstraintLayout>

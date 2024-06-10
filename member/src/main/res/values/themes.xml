@@ -1,0 +1,8 @@
+<resources>
+  <style name="Theme.ArtificialIntelligence.NoActionBar" >
+  <item name="windowActionBar">false</item>
+  <item name="windowNoTitle">true</item>
+</style>
+  <style name="Theme.ArtificialIntelligence.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+  <style name="Theme.ArtificialIntelligence.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

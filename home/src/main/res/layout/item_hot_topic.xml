@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:maxWidth="250dp"
+    android:layout_height="wrap_content"
+   >
+
+
+    <org.jxxy.debug.corekit.widget.IconFont
+        android:id="@+id/star_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\t&#xe66a;"
+        android:scrollbars="none"
+        android:textColor="@color/黄色"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_item_tot_topic_1" />
+
+    <TextView
+        android:layout_marginStart="3dp"
+        android:id="@+id/tv_item_tot_topic_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hot_topic_1"
+        android:textColor="@color/text100"
+        android:textSize="@dimen/small_text_size"
+        android:paddingRight="200dp"
+        android:maxLength="17"
+        app:ellipsize_mode="end"
+        app:layout_constraintStart_toEndOf="@+id/star_1"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

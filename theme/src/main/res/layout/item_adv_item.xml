@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.jxxy.debug.corekit.widget.RoundConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    app:round_corner="8dp"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/bgView"
+        app:layout_constraintHeight_percent="0.8"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/atv"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:textSize="@dimen/normal_text_size"
+        android:textColor="@color/black"
+        android:padding="3dp"
+        android:background="@drawable/textview_round_bottom"
+        app:layout_constraintTop_toBottomOf="@id/bgView"/>
+</org.jxxy.debug.corekit.widget.RoundConstraintLayout>

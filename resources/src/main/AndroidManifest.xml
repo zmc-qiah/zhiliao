@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.jxxy.debug.resources">
+
+    <application>
+        <activity
+            android:name=".activity.NewResourcesVideoActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+        <activity
+            android:name=".activity.NewNewResourcesTextActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+        <activity
+            android:name=".activity.TextMoreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ResourceComicActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ResourceBroadcastActivity"
+            android:exported="false" />
+    </application>
+
+
+</manifest>

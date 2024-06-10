@@ -1,0 +1,19 @@
+<resources>
+    <string name="category_scan">&#x904;</string>
+    <string name="category_like">&#x905;</string>
+    <string name="label">&#xe63d;</string>
+    <string name="expand_close">&#xe662;</string>
+    <string name="expand_open">&#xe6cc;</string>
+    <string name="icon_note">&#xe652;</string>
+    <string name="icon_send">&#xe615;</string>
+    <string name="video_tool">继续播放</string>
+    <string name="title">这个BASE_URL是我自己写的后端项目的网址，等后端项目上云后再改成对应的url，或者根据你的需</string>
+    <string name="icon_read">&#xe664;</string>
+    <string name="icon_berief">&#xe78b;</string>
+    <string name="icon_comment">&#xe8b4;</string>
+    <string name="icon_detail">&#xe620;</string>
+    <string name="icon_setting">&#x10127;</string>
+    <string name="icon_marked_text">&#xe8af;</string>
+    <string name="fast_gpt_appId_second">64fe913bd7fb469843982d5e</string>
+    <string name="fast_gpt_apikey_second">fastgpt-x48yzz6powc3zluafkqaxu0s</string>
+</resources>

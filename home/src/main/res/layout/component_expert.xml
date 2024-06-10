@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.jxxy.debug.corekit.widget.RoundConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:paddingBottom="10dp"
+    android:background="@drawable/border">
+
+    <TextView
+        android:id="@+id/expert_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/Big_text_size"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="12dp"
+        android:textColor="@color/primary100"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/expert_barrier"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/expert_barrier"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="expert_title"/>
+
+
+    <ImageView
+        android:id="@+id/expert_iv_1"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expert_title" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/expert_tv_name_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/expert_tv_name_1"
+        android:textColor="@color/text100"
+        android:textSize="@dimen/Big_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/expert_iv_1"
+        app:layout_constraintTop_toBottomOf="@+id/expert_title" />
+
+                <TextView
+                    android:id="@+id/expert_tv_life_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="@string/expert_life_1"
+                    android:textColor="@color/text100"
+                    android:textSize="@dimen/normal_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/expert_tv_name_1"
+                    app:layout_constraintStart_toStartOf="@+id/expert_tv_name_1"
+                    app:layout_constraintTop_toBottomOf="@+id/expert_tv_name_1" />
+
+
+                <TextView
+                    android:id="@+id/expert_tv_content_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="a b "
+                    android:textColor="@color/text200"
+                    android:textSize="@dimen/normal_text_size"
+                    app:layout_constraintEnd_toEndOf="@+id/expert_tv_life_1"
+                    app:layout_constraintStart_toStartOf="@+id/expert_tv_life_1"
+                    app:layout_constraintTop_toBottomOf="@+id/expert_tv_life_1" />
+
+    <TextView
+        android:id="@+id/expert_tv_content_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:maxLines="5"
+        android:paddingHorizontal="10dp"
+        android:layout_marginLeft="120dp"
+        android:text="@string/expert_tv_content_1"
+        android:textColor="@color/text200"
+        android:textSize="@dimen/normal_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:ellipsize="end"
+        app:layout_constraintStart_toEndOf="@+id/expert_iv_1"
+        app:layout_constraintTop_toBottomOf="@+id/expert_tv_content_1" />
+
+
+</org.jxxy.debug.corekit.widget.RoundConstraintLayout>

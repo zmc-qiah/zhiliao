@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_100"
+    android:paddingTop="@dimen/status_bar_height"
+    tools:context=".fragment.activity.StatisticActivity">
+
+
+
+    <org.jxxy.debug.corekit.widget.CommonToolbar
+        android:id="@+id/statisticsCl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/bg_100"
+        app:titleText="答题统计"
+        app:dark_theme="true"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintTop_toTopOf="parent">
+
+<!--        <TextView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:text="答题统计"-->
+<!--            android:textSize="@dimen/title_text_size"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="#0A0A0A"-->
+<!--            app:layout_constraintHeight_percent="0.8"-->
+<!--            app:layout_constraintWidth_percent="0.4"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--            app:layout_constraintRight_toRightOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.3"/>-->
+    </org.jxxy.debug.corekit.widget.CommonToolbar>
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:background="#000000"-->
+<!--        app:layout_constraintTop_toTopOf="@id/statisticsCl"/>-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintHeight_percent="0.94"
+        app:layout_constraintBottom_toBottomOf="parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/statisticsData"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/statistic_background"
+        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.8">
+
+        <TextView
+            android:id="@+id/answerCountTv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="答题数"
+            android:textColor="#0a0a0a"
+            android:textSize="@dimen/Big_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.13"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/answerPercentTv"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.323"
+            app:layout_constraintWidth_percent="0.24" />
+
+        <TextView
+            android:id="@+id/answerCountUnitTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="题"
+            android:textColor="#0a0a0a"
+            android:textSize="@dimen/Big_text_size"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/answerCountTv"
+            app:layout_constraintLeft_toRightOf="@+id/answerSumTv"
+            app:layout_constraintRight_toRightOf="@+id/answerCountTv" />
+
+        <TextView
+            android:id="@+id/answerSumTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#00CC65"
+            android:textSize="@dimen/num_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/answerCountUnitTv"
+            app:layout_constraintLeft_toLeftOf="@+id/answerCountTv"
+            app:layout_constraintRight_toLeftOf="@+id/answerCountUnitTv"
+            app:layout_constraintTop_toTopOf="@+id/answerCountUnitTv" />
+
+        <TextView
+            android:id="@+id/answerPercentTv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="正确率"
+            android:textColor="#0a0a0a"
+            android:textSize="@dimen/Big_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/answerCountTv"
+            app:layout_constraintHeight_percent="0.13"
+            app:layout_constraintLeft_toRightOf="@+id/answerCountTv"
+            app:layout_constraintRight_toLeftOf="@+id/answerDayTv"
+            app:layout_constraintWidth_percent="0.24" />
+
+        <TextView
+            android:id="@+id/answerPercentUnitTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="%"
+            android:textSize="@dimen/Big_text_size"
+            android:gravity="center"
+            android:textColor="#0a0a0a"
+            app:layout_constraintBottom_toTopOf="@+id/answerPercentTv"
+            app:layout_constraintLeft_toRightOf="@+id/percentTv"
+            app:layout_constraintRight_toRightOf="@+id/answerPercentTv" />
+
+        <TextView
+            android:id="@+id/percentTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#00CC65"
+            android:textSize="@dimen/num_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/answerPercentUnitTv"
+            app:layout_constraintLeft_toLeftOf="@+id/answerPercentTv"
+            app:layout_constraintRight_toLeftOf="@+id/answerPercentUnitTv"
+            app:layout_constraintTop_toTopOf="@+id/answerPercentUnitTv" />
+
+        <TextView
+            android:id="@+id/answerDayTv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="坚持学习"
+            android:textColor="#0a0a0a"
+            android:textSize="@dimen/Big_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/answerCountTv"
+            app:layout_constraintHeight_percent="0.13"
+            app:layout_constraintLeft_toRightOf="@+id/answerPercentTv"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintWidth_percent="0.28" />
+
+        <TextView
+            android:id="@+id/answerDayUnitTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="天"
+            android:textSize="@dimen/Big_text_size"
+            android:gravity="center"
+            android:textColor="#0a0a0a"
+            app:layout_constraintBottom_toTopOf="@+id/answerDayTv"
+            app:layout_constraintLeft_toRightOf="@+id/daysTv"
+            app:layout_constraintRight_toRightOf="@+id/answerDayTv" />
+
+        <TextView
+            android:id="@+id/daysTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#00CC65"
+            android:textSize="@dimen/num_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/answerDayUnitTv"
+            app:layout_constraintLeft_toLeftOf="@+id/answerDayTv"
+            app:layout_constraintRight_toLeftOf="@+id/answerDayUnitTv"
+            app:layout_constraintTop_toTopOf="@+id/answerDayUnitTv" />
+
+        <TextView
+            android:id="@+id/interVideoGameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="28dp"
+            android:gravity="center"
+            android:text="探谜通关"
+            android:textColor="#0a0a0a"
+            android:textSize="@dimen/Big_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.13"
+            app:layout_constraintRight_toRightOf="@id/answerDayTv"
+            app:layout_constraintWidth_percent="0.24" />
+
+        <TextView
+            android:id="@+id/interVideoGameUnitTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关"
+            android:textColor="#0a0a0a"
+            android:textSize="@dimen/Big_text_size"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/interVideoGameTv"
+            app:layout_constraintLeft_toRightOf="@+id/interVideoGameCountTv"
+            app:layout_constraintRight_toRightOf="@+id/interVideoGameTv" />
+
+        <TextView
+            android:id="@+id/interVideoGameCountTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:textColor="#00CC65"
+            android:textSize="@dimen/num_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/interVideoGameUnitTv"
+            app:layout_constraintLeft_toLeftOf="@+id/interVideoGameTv"
+            app:layout_constraintRight_toLeftOf="@+id/interVideoGameUnitTv"
+            app:layout_constraintTop_toTopOf="@+id/interVideoGameUnitTv" />
+
+        <TextView
+            android:id="@+id/reviewTv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="28dp"
+            android:gravity="center"
+            android:text="已复习"
+            android:textColor="#0a0a0a"
+            android:textSize="@dimen/Big_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.13"
+            app:layout_constraintLeft_toRightOf="@+id/answerCountTv"
+            app:layout_constraintRight_toLeftOf="@+id/answerDayTv"
+            app:layout_constraintWidth_percent="0.24" />
+
+        <TextView
+            android:id="@+id/reviewUnitTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="题"
+            android:textSize="@dimen/Big_text_size"
+            android:gravity="center"
+            android:textColor="#0a0a0a"
+            app:layout_constraintBottom_toTopOf="@+id/reviewTv"
+            app:layout_constraintLeft_toRightOf="@+id/reviewCountTv"
+            app:layout_constraintRight_toRightOf="@+id/reviewTv" />
+
+        <TextView
+            android:id="@+id/reviewCountTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16"
+            android:textColor="#FFA500"
+            android:textSize="@dimen/num_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/reviewUnitTv"
+            app:layout_constraintLeft_toLeftOf="@+id/reviewTv"
+            app:layout_constraintRight_toLeftOf="@+id/reviewUnitTv"
+            app:layout_constraintTop_toTopOf="@+id/reviewUnitTv" />
+
+        <TextView
+            android:id="@+id/answerPkTv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="28dp"
+            android:gravity="center"
+            android:text="PK次数"
+            android:textColor="#0a0a0a"
+            android:textSize="@dimen/Big_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.13"
+            app:layout_constraintHorizontal_bias="0.478"
+            app:layout_constraintLeft_toLeftOf="@id/answerCountTv"
+            app:layout_constraintWidth_percent="0.24" />
+
+        <TextView
+            android:id="@+id/answerPkUnitTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="次"
+            android:textColor="#0a0a0a"
+            android:textSize="@dimen/Big_text_size"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/answerPkTv"
+            app:layout_constraintLeft_toRightOf="@+id/answerPkCountTv"
+            app:layout_constraintRight_toRightOf="@+id/answerPkTv" />
+
+        <TextView
+            android:id="@+id/answerPkCountTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:textColor="#00CC65"
+            android:textSize="@dimen/num_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/answerPkUnitTv"
+            app:layout_constraintLeft_toLeftOf="@+id/answerPkTv"
+            app:layout_constraintRight_toLeftOf="@+id/answerPkUnitTv"
+            app:layout_constraintTop_toTopOf="@+id/answerPkUnitTv" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:text="近7天答题统计"
+        android:textStyle="bold"
+        android:autoSizeTextType="uniform"
+        android:textColor="#0a0a0a"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintTop_toBottomOf="@+id/statisticsData"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="44dp"
+        android:text="随着答题数而动态变化"
+        android:textSize="@dimen/normal_text_size"
+        app:layout_constraintHeight_percent="0.03"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statisticsData"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/statisticCt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.8"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

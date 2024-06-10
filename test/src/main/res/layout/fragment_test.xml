@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_200"
+    android:paddingTop="35dp">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/testAB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/CardView.Light">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_100"
+            app:layout_scrollFlags="scroll|snap"
+            app:title=""
+            app:toolbarId="@id/testTb">
+
+            <org.jxxy.debug.corekit.widget.RoundConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.6">
+
+                <ImageView
+                    android:id="@+id/backgroundShowIv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="0.6"/>
+
+
+                <ImageView
+                    android:id="@+id/backgroundIv"
+                    android:layout_width="0dp"
+                    android:layout_height="270dp"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="0.6"
+                    app:layout_constraintBottom_toBottomOf="@id/fragmentTestIv"
+                    app:layout_constraintLeft_toLeftOf="@id/fragmentTestIv"
+                    app:layout_constraintRight_toRightOf="@id/fragmentTestIv"
+                    app:layout_constraintTop_toTopOf="@id/fragmentTestIv"
+                    app:layout_constraintWidth_percent="0.8" />
+
+                <ImageView
+                    android:id="@+id/fragmentTestIv"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:background="@color/transparent"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="fitXY"
+                    android:layout_marginTop="35dp"
+                    android:paddingTop="10dp"
+                    app:layout_collapseMode="parallax"
+                    app:layout_constraintWidth_percent="0.5"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_collapseParallaxMultiplier="0.6"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+<!--                <TextView-->
+<!--                    android:id="@+id/fragmentTestTv"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:background="@color/transparent"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="成就446556465"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="@dimen/title_text_size"-->
+<!--                    android:textStyle="bold"-->
+<!--                    app:layout_collapseMode="parallax"-->
+<!--                    app:layout_collapseParallaxMultiplier="0.6"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/fragmentTestIv"-->
+<!--                    app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                    app:layout_constraintWidth_percent="0.4"-->
+<!--                    app:layout_constraintRight_toRightOf="parent" />-->
+
+
+            </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/testTb"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:minHeight="35dp"
+                app:if_back="false"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/testRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="10dp"
+        app:layout_anchor="@id/testAB"
+        app:layout_anchorGravity="bottom"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

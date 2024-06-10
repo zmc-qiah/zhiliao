@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/border">
+
+    <TextView
+        android:id="@+id/competition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/breakthough"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/find_im_1"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/competition"
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/find_1"
+        app:layout_constraintTop_toBottomOf="@id/find_im_1"
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/find_im_2"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toRightOf="@+id/find_im_1"
+        app:layout_constraintTop_toBottomOf="@+id/competition" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="@string/find_1"
+        app:layout_constraintLeft_toRightOf="@+id/find_im_1"
+        app:layout_constraintTop_toBottomOf="@id/find_im_2" />
+
+    <ImageView
+        android:id="@+id/find_im_3"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toRightOf="@+id/find_im_2"
+        app:layout_constraintTop_toBottomOf="@+id/competition" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="@string/find_1"
+        app:layout_constraintLeft_toRightOf="@+id/find_im_2"
+        app:layout_constraintTop_toBottomOf="@id/find_im_3" />
+
+    <ImageView
+        android:id="@+id/find_im_4"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toRightOf="@+id/find_im_3"
+        app:layout_constraintTop_toBottomOf="@+id/competition" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="@string/find_1"
+        app:layout_constraintLeft_toRightOf="@+id/find_im_3"
+        app:layout_constraintTop_toBottomOf="@id/find_im_4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

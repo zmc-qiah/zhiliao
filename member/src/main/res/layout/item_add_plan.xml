@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:id="@+id/addPlan1View"
+        android:background="@color/grey"
+        app:layout_constraintTop_toTopOf="parent">
+    </View>
+    <org.jxxy.debug.corekit.widget.IconFont
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/study_plan"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="20sp"
+        android:id="@+id/planNameIcon"
+        app:layout_constraintBottom_toTopOf="@id/planNameET"
+        app:layout_constraintTop_toBottomOf="@id/planNameET"
+        app:layout_constraintLeft_toLeftOf="parent">
+    </org.jxxy.debug.corekit.widget.IconFont>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        app:layout_constraintTop_toBottomOf="@id/addPlan1View"
+        app:layout_constraintLeft_toRightOf="@id/planNameIcon"
+        android:gravity="center"
+        android:id="@+id/planNameET"
+        android:background="@color/transparent"
+        android:hint="输入学习计划的名称,如:深度学习"
+        android:layout_marginLeft="12dp">
+    </EditText>
+
+    <View
+        android:id="@+id/addPlan2View"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@color/grey"
+        app:layout_constraintTop_toBottomOf="@id/planNameET"
+        >
+    </View>
+    <org.jxxy.debug.corekit.widget.IconFont
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/study_ddl"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="20sp"
+        android:id="@+id/planEndTimeIcon"
+        app:layout_constraintBottom_toTopOf="@id/planEndTimeET"
+        app:layout_constraintTop_toBottomOf="@id/planEndTimeET"
+        app:layout_constraintLeft_toLeftOf="parent">
+    </org.jxxy.debug.corekit.widget.IconFont>
+
+    <EditText
+        android:id="@+id/planEndTimeET"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginLeft="12dp"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:inputType="datetime"
+        android:hint="设置学习计划截至日期"
+        app:layout_constraintLeft_toRightOf="@id/planEndTimeIcon"
+        app:layout_constraintTop_toBottomOf="@id/addPlan2View">
+    </EditText>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

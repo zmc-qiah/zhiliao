@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomProgressBar" parent="android:Widget.ProgressBar.Horizontal">
+        <!-- 设置进度条的颜色 -->
+        <item name="android:progressTint">#00CC65</item>
+
+        <!-- 设置进度条的背景颜色 -->
+        <item name="android:progressBackgroundTint">@color/bg_200</item>
+    </style>
+</resources>

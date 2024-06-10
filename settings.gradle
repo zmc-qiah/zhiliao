@@ -1,0 +1,4 @@
+rootProject.name = "Artificial-Intelligence"
+
+apply from: file('component_config.gradle')
+includeComponents()

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="30dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/frament_user"
+    tools:context="org.jxxy.debug.member.activity.PointsDetailsActivity">
+
+   <org.jxxy.debug.corekit.widget.CommonToolbar
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/toolbar_height"
+       android:background="@color/color2"
+       android:id="@+id/point_details_toolbar"
+       app:titleText="积分明细"
+       app:dark_theme="true"
+       app:if_back="true"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       >
+
+   </org.jxxy.debug.corekit.widget.CommonToolbar>
+
+   <ExpandableListView
+       android:scrollbars="none"
+       android:id="@+id/pointsDetails"
+       android:layout_width="match_parent"
+       android:layout_height="500dp"
+       android:layout_margin="20dp"
+       android:layout_marginRight="20dp"
+       android:layout_marginLeft="20dp"
+       android:layout_marginBottom="80dp"
+      app:layout_constraintTop_toBottomOf="@id/point_details_toolbar"
+       tools:layout_editor_absoluteX="16dp">
+
+   </ExpandableListView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="light_blue苍苍">#4781C3</color>
+    <color name="blue宝蓝">#1F286F</color>
+
+    <color name="light_blue">#bdccf5</color>
+    <color name="light_light_blue">#e1e7f8</color>
+    <color name="search_blue">#f6f8fd</color>
+
+    <color name="yellow蜜蜡">#E7B140</color>
+    <color name="green官绿">#00723C</color>
+
+    <color name="deep_red烟红">#902E22</color>
+    <color name="skin_yellow赤璋">#E3C297</color>
+
+    <color name="light_yellow米汤娇">#EEEAD9</color>
+    <color name="light_red朱颜酡">#EF856D</color>
+
+    <color name="purple青莲">#7B5AA3</color>
+    <color name="dark_blue霁蓝">#101E4A</color>
+
+    <color name="tomato_red朱缥">#E94721</color>
+    <color name="blue_white东方亮">#F5FBFE</color>
+
+    <color name="grey">#eaeaea</color>
+</resources>

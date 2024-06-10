@@ -1,0 +1,60 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.kapt'
+    id 'com.chaquo.python'
+}
+def MODULE_NAME = "theme"
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+        buildConfigField("String", "TAG", "\"${MODULE_NAME}\"")
+        ndk {
+            abiFilters ("armeabi-v7a","arm64-v8a") //, , "x86", "x86_64"
+        }
+        python {
+            buildPython PYTHON_ADDRESS
+            version PYTHON_VERSION
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+    implementation 'com.alibaba:dashscope-sdk-java:2.14.4'
+
+    implementation 'com.github.Jay-Goo:WaveLineView:v1.0.4'
+    implementation 'com.yarolegovich:discrete-scrollview:1.5.1'
+    implementation 'org.tensorflow:tensorflow-lite:2.5.0'
+    implementation 'org.tensorflow:tensorflow-lite-gpu:2.5.0'
+    implementation 'org.tensorflow:tensorflow-lite-support:0.3.0'
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+    implementation files('libs\\Msc.jar')
+    kapt 'com.google.auto.service:auto-service:1.0-rc6'
+    importDependencies(MODULE_NAME, dependencies)
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+}

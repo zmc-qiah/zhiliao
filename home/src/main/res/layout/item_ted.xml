@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_10"
+    android:paddingVertical="6dp"
+    android:paddingHorizontal="8dp">
+
+        <ImageView
+            android:id="@+id/vd_3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:round_stroke_color="@color/black" />
+
+        <TextView
+            android:id="@+id/ted_name_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="105dp"
+            android:text="@string/ted_name"
+            android:textColor="@color/text_200"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/vd_3"
+            app:layout_constraintTop_toTopOf="@+id/vd_3" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/ted_number_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ted_number"
+            app:layout_constraintBottom_toBottomOf="@+id/tv"
+            app:layout_constraintStart_toEndOf="@+id/tv"
+            app:layout_constraintTop_toTopOf="@+id/tv" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="专辑:"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/vd_3"
+            app:layout_constraintStart_toEndOf="@+id/vd_3"
+          />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ted_style"
+            android:textSize="12sp"
+            android:textColor="@color/primary_100"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

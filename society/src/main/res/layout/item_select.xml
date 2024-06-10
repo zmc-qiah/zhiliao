@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_white"
+    android:padding="5dp">
+
+    <TextView
+        android:textColor="@color/black"
+        android:id="@+id/titleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:paddingRight="10dp"
+        android:text="预览预览预览预览"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <org.jxxy.debug.corekit.widget.EllipsizeTextView
+        android:id="@+id/textTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="3dp"
+        android:text="正文正文正文正文正文正文正文正文正文正文正文正文"
+        app:ellipsize_max="40"
+        app:ellipsize_mode="end"
+        app:layout_constraintStart_toStartOf="@+id/titleTv"
+        app:layout_constraintTop_toBottomOf="@+id/titleTv" />
+
+    <TextView
+        android:id="@+id/tagTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="tag"
+        android:textColor="@color/blue_tag"
+        app:layout_constraintStart_toStartOf="@+id/textTv"
+        app:layout_constraintTop_toBottomOf="@+id/textTv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

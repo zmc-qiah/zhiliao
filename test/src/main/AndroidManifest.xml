@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.jxxy.debug.test">
+
+    <application>
+        <activity
+            android:name=".fragment.activity.InterVideoActivity"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".fragment.activity.InterVideoListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".fragment.activity.AnswerQuestionFinishActivity"
+            android:exported="false" />
+        <activity
+            android:name=".fragment.activity.ProgrammingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".fragment.activity.GameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".fragment.activity.StudyPlanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".fragment.activity.WrongActivity"
+            android:exported="false" />
+        <activity
+            android:name=".fragment.activity.CollectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".fragment.activity.StatisticActivity"
+            android:exported="false" />
+        <activity
+            android:name=".fragment.activity.QuestionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".fragment.activity.AnswerListActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.mdapp.Game2048.FirstGameActivity"
+            android:exported="false"
+            android:label=""
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name="cn.lentme.projects.whitetile.main.ThirdGameActivity"
+            android:exported="false"
+            android:label=""
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name="developer.abdusamid.puzzlesapp.activity.PuzzlesActivity"
+            android:exported="false"
+            android:label=""
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name="developer.abdusamid.puzzlesapp.activity.PuzzleGameActivity"
+            android:exported="false"
+            android:theme="@style/FullScreenTheme" />
+        <activity android:name=".fragment.activity.FillTestActivity"
+            android:exported="false"/>
+
+        <activity android:name=".fragment.activity.TheChartsActivity"
+            android:exported="false"/>
+
+        <activity android:name=".fragment.pk.NewLoadingPkActivity"/>
+        <activity android:name=".fragment.pk.NewPkActivity"/>
+        <activity android:name=".fragment.activity.AchievementActivity"
+            android:exported="false"/>
+        <activity android:name=".fragment.pk.NewLoadingPkActivity"/>
+        <activity android:name=".fragment.pk.NewPkActivity"/>
+    </application>
+
+</manifest>

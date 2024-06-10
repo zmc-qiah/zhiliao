@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.jxxy.debug.corekit.widget.RoundConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="10dp"
+    app:round_corner="5dp"
+    android:background="@color/bg_200">
+
+    <TextView
+        android:id="@+id/ruleTitleTv"
+        android:text="游戏规则"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/Big_text_size"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/black" />
+    <TextView
+        android:id="@+id/ruleContentTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/ruleTitleTv"
+        tools:text="46545645646545666666666666666666666666666666666666666666666666666"/>
+
+
+</org.jxxy.debug.corekit.widget.RoundConstraintLayout>

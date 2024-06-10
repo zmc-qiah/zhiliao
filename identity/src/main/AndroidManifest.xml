@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.jxxy.debug.identity">
+    <application>
+        <activity
+            android:name="orgjxxy.debug.identity.activity.IdentityActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name="orgjxxy.debug.identity.activity.IdentityStartActivity"
+            android:exported="false">
+        </activity>
+    </application>
+</manifest>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="styleBottom" parent="Theme.Design.BottomSheetDialog">
+        <item name="android:background">
+            @style/bottomSheetStyleWrapper
+        </item>
+    </style>
+
+    <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">
+            @android:color/transparent
+        </item>
+    </style>
+
+    <style name="NoRippleTab" parent="Widget.Design.TabLayout">
+        <item name="tabBackground">@android:color/transparent</item>
+        <item name="android:selectableItemBackground">@drawable/ripple_empty</item>
+        <item name="android:colorControlHighlight">@android:color/transparent</item>
+    </style>
+
+    <style name="FullScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="CustomBottomSheetDialog" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:layout_height">90dp</item> <!-- 自定义高度 -->
+    </style>
+
+    <style name="MyBottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyleWrapper</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="BottomSheetStyleWrapper" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+</resources>

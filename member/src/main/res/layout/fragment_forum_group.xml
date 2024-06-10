@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/smartRefreshLayout"
+    android:background="@color/bg_100"
+    android:layout_marginTop="4dp"
+    android:paddingBottom="40dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/primary_100"
+                android:textSize="@dimen/num_text_size"
+                android:id="@+id/errorTextView"
+                android:text="当前静悄悄的，\n快来发布第一条动态吧！">
+            </TextView>
+            <cn.yonghui.hyd.main.ui.cms.activities.seckillactivities.widget.nested.NestedChildRecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:background="@color/bg_200"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:id="@+id/forumRecycleView">
+            </cn.yonghui.hyd.main.ui.cms.activities.seckillactivities.widget.nested.NestedChildRecyclerView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

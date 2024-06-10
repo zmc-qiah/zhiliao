@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_searchmiddle">
+    <EditText
+        android:id="@+id/editText"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="300dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="30dp"
+        android:layout_weight="10"
+        android:background="@drawable/rounded_searchwhite"
+        android:gravity="center"
+        android:hint="默认文本"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:textColorHint="#95A1AA"
+        android:textSize="@dimen/normal_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@null"
+        android:text="搜索"
+        android:textColor="@color/black"
+        android:textSize="@dimen/Big_text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/editText"
+        app:layout_constraintStart_toEndOf="@+id/editText"
+        app:layout_constraintTop_toTopOf="@+id/editText" />
+    <org.jxxy.debug.corekit.widget.IconFont
+        android:id="@+id/point_icon_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/search"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintTop_toTopOf="@+id/editText"
+        app:layout_constraintWidth_percent="0.33">
+
+    </org.jxxy.debug.corekit.widget.IconFont>
+
+    <ScrollView
+        android:padding="10dp"
+        android:background="@color/light_grey"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="85dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:padding="10dp"
+                android:id="@+id/constraintLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_white"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="@dimen/Big_text_size"
+                    android:textColor="@color/black"
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="题型：什么是深度学习"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#000000"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="深度学习是一种人工智能（AI）方法，用于教计算机以受人脑启发的方式处理数据。"
+                    android:textColor="@color/black"
+
+                    android:textSize="@dimen/normal_text_size"
+
+                    app:layout_constraintStart_toStartOf="@+id/textView4"
+                    app:layout_constraintTop_toBottomOf="@+id/view2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_white"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+                tools:layout_editor_absoluteX="0dp">
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_marginStart="8dp"
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="问题解惑"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/Big_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_height="wrap_content"
+                    android:text="深度学习是人工智能领域中的一种机器学习方法，它模仿人类大脑的神经网络结构，通过构建和训练深层次的神经网络来实现模式识别和预测。深度学习的核心思想是提取数据的高级抽象特征，并通过这些特征进行学习和决策。深度学习使用多层次的神经网络结构，其中每一层都从前一层提取特征并进行转换，从而逐渐实现对输入数据更高级、更抽象的理解。这些层次通常包括输入层、隐藏层和输出层。隐藏层可以有多个，每一层都包含许多神经元（节点），它们通过加权连接传递信息。深度学习可以应用于各种任务，包括图像识别、语音识别、自然语言处理、推荐系统等。它在许多领域都取得了显著的成果，并成为人工智能领域的重要技术之一。深度学习的优势在于它可以处理大量的复杂数据，并从中提取出有用的特征，从而提高了许多任务的准确性和效率。"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/normal_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view" />
+
+                <View
+                    android:layout_marginTop="3dp"
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="4dp"
+                    android:background="#000000"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <!-- 标题栏 -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:id="@+id/appBar">
+        <org.jxxy.debug.corekit.widget.CommonToolbar
+
+            android:layout_width="match_parent"
+            android:layout_marginTop="24dp"
+            android:layout_height="@dimen/toolbar_height"
+            app:titleText="研讨会"
+            app:if_back="true"
+            android:id="@+id/planToolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_scrollFlags="enterAlways|scroll">
+
+        </org.jxxy.debug.corekit.widget.CommonToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- 内容部分 -->
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/seminarRv"
+        android:background="@drawable/background_main_society"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="88dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_whiteexp"
+        android:padding="10dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="56dp"
+                android:layout_height="65dp"
+                android:background="@drawable/round_lecture_primary"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="讲座日期"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_text_size" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/timeRv"
+            android:layout_width="353dp"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toEndOf="@+id/cardView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

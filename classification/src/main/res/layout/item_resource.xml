@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.jxxy.debug.corekit.widget.RoundConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingVertical="20dp"
+    app:round_corner="15dp">
+
+    <ImageView
+        android:id="@+id/img_recommend2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginHorizontal="15dp"
+        android:background="@color/color_yellow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/recommend2_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/title"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/img_recommend2"
+        app:layout_constraintTop_toTopOf="@+id/img_recommend2" />
+
+    <TextView
+        android:id="@+id/recommend2_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="10dp"
+        android:maxLines="2"
+        android:text="@string/hello_blank_fragment"
+        android:textSize="17sp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="@id/recommend2_title"
+        app:layout_constraintEnd_toEndOf="@id/recommend2_title"
+        app:layout_constraintBottom_toTopOf="@+id/recommend2_date"
+        app:layout_constraintTop_toBottomOf="@+id/recommend2_title" />
+
+    <TextView
+        android:id="@+id/recommend2_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/recommend2_title"
+        app:layout_constraintBottom_toBottomOf="@+id/img_recommend2" />
+
+</org.jxxy.debug.corekit.widget.RoundConstraintLayout>

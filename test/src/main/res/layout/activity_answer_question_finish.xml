@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_finish"
+    android:paddingTop="@dimen/status_bar_height"
+    tools:context=".fragment.activity.AnswerQuestionFinishActivity">
+
+    <org.jxxy.debug.corekit.widget.CommonToolbar
+        android:id="@+id/finishToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        app:titleText="答题结果"
+        app:dark_theme="true"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/userIv"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/finishToolbar" />
+
+    <TextView
+        android:id="@+id/userTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/title_text_size"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/userIv"
+        app:layout_constraintLeft_toLeftOf="@id/userIv"
+        app:layout_constraintRight_toRightOf="@id/userIv"
+        tools:text="小禅"/>
+
+    <TextView
+        android:id="@+id/contentTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="下面是你本次答题的情况"
+        app:layout_constraintTop_toBottomOf="@id/userTv"
+        app:layout_constraintLeft_toLeftOf="@id/userTv"
+        app:layout_constraintRight_toRightOf="@id/userTv"/>
+
+    <TextView
+        android:id="@+id/useTimeTvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="@dimen/Big_text_size"
+        android:textColor="@color/black"
+        android:text="本次答题用时"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintTop_toBottomOf="@id/contentTv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/userTv"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/bg_200"
+        app:layout_constraintTop_toBottomOf="@+id/useTimeTvTitle"
+        app:layout_constraintLeft_toLeftOf="@id/useTimeTvTitle"
+        app:layout_constraintRight_toRightOf="@id/useTimeTvTitle"/>
+
+    <TextView
+        android:id="@+id/useTimeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/useTimeTvTitle"
+        app:layout_constraintLeft_toLeftOf="@id/useTimeTvTitle"
+        app:layout_constraintRight_toRightOf="@id/useTimeTvTitle"
+        app:layout_constraintHorizontal_bias="0.1"
+        tools:text="00:15"/>
+
+    <TextView
+        android:id="@+id/percentTvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="@dimen/Big_text_size"
+        android:textColor="@color/black"
+        android:text="本次答题正确率"
+        app:layout_constraintTop_toBottomOf="@id/useTimeTv"
+        app:layout_constraintLeft_toLeftOf="@id/useTimeTvTitle" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/bg_200"
+        app:layout_constraintTop_toBottomOf="@+id/percentTvTitle"
+        app:layout_constraintLeft_toLeftOf="@id/percentTvTitle"
+        app:layout_constraintRight_toRightOf="@id/percentTvTitle"/>
+
+    <TextView
+        android:id="@+id/percentTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/percentTvTitle"
+        app:layout_constraintLeft_toLeftOf="@id/percentTvTitle"
+        app:layout_constraintRight_toRightOf="@id/percentTvTitle"
+        app:layout_constraintHorizontal_bias="0.1"
+        tools:text="97"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="%"
+        android:textStyle="bold"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/percentTv"
+        app:layout_constraintStart_toEndOf="@id/percentTv"/>
+
+    <TextView
+        android:id="@+id/rightTvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="@dimen/Big_text_size"
+        android:textColor="@color/black"
+        android:text="答对了"
+        app:layout_constraintTop_toBottomOf="@id/contentTv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintLeft_toRightOf="@id/userTv"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/bg_200"
+        app:layout_constraintTop_toBottomOf="@+id/rightTvTitle"
+        app:layout_constraintLeft_toLeftOf="@id/rightTvTitle"
+        app:layout_constraintRight_toRightOf="@id/rightTvTitle"/>
+
+    <TextView
+        android:id="@+id/rightTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/rightTvTitle"
+        app:layout_constraintLeft_toLeftOf="@id/rightTvTitle"
+        app:layout_constraintRight_toRightOf="@id/rightTvTitle"
+        app:layout_constraintHorizontal_bias="0.1"
+        tools:text="3"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="题"
+        android:textStyle="bold"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/rightTv"
+        app:layout_constraintStart_toEndOf="@id/rightTv"/>
+
+    <TextView
+        android:id="@+id/dayTvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="@dimen/Big_text_size"
+        android:textColor="@color/black"
+        android:text="坚持了"
+        app:layout_constraintTop_toBottomOf="@id/rightTv"
+        app:layout_constraintLeft_toLeftOf="@id/rightTvTitle"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/bg_200"
+        app:layout_constraintTop_toBottomOf="@+id/dayTvTitle"
+        app:layout_constraintLeft_toLeftOf="@id/dayTvTitle"
+        app:layout_constraintRight_toRightOf="@id/dayTvTitle"/>
+
+    <TextView
+        android:id="@+id/dayTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:text="15"
+        app:layout_constraintTop_toBottomOf="@+id/dayTvTitle"
+        app:layout_constraintLeft_toLeftOf="@id/dayTvTitle"
+        app:layout_constraintRight_toRightOf="@id/dayTvTitle"
+        app:layout_constraintHorizontal_bias="0.1"
+        tools:text="3"/>
+
+    <TextView
+        android:id="@+id/dayUnitTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="天"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintStart_toEndOf="@id/dayTv"
+        app:layout_constraintBottom_toBottomOf="@id/dayTv"/>
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/finishTv"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center"-->
+<!--        android:textSize="@dimen/num_text_size"-->
+<!--        android:textColor="#0a0a0a"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.283" />-->
+
+    <Button
+        android:id="@+id/finishBt"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="28dp"
+        android:text="确认"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/Big_text_size"
+        android:background="@drawable/button_item_next"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/percentTv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

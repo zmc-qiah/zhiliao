@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="2dp">
+
+    <org.jxxy.debug.corekit.widget.IconFont
+        android:id="@+id/iconFont3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="3dp"
+        android:text="@string/topic2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <org.jxxy.debug.corekit.widget.EllipsizeTextView
+        android:id="@+id/textTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_weight="10"
+        android:text="启动[八月学习计划]"
+        android:textColor="@color/black"
+        android:textSize="@dimen/small_text_size"
+        app:ellipsize_max="13"
+        app:ellipsize_mode="end"
+        app:layout_constraintBottom_toBottomOf="@+id/iconFont3"
+        app:layout_constraintStart_toEndOf="@+id/iconFont3"
+        app:layout_constraintTop_toTopOf="@+id/iconFont3" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_height="1dp"
+        android:background="@color/light_white_deep"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTv" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
