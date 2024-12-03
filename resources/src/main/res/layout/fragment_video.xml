@@ -9,11 +9,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:alpha="0">
     </View>
-    <cn.yonghui.hyd.main.ui.cms.activities.seckillactivities.widget.nested.NestedChildRecyclerView
+        <org.jxxy.debug.common.widget.nested.NestedChildRecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/recycleView"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
-    </cn.yonghui.hyd.main.ui.cms.activities.seckillactivities.widget.nested.NestedChildRecyclerView>
-
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

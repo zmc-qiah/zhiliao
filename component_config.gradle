@@ -88,8 +88,6 @@ ext {
                     index      : 0,
                     module     : 'corekit',
                     group      : COMPONENT_GROUP,
-                    snapshot   : true,
-                    version    : '1.0.0.35',
                     localEnable: true,
             ],
             [
@@ -192,6 +190,7 @@ ext {
 
 
     ]
+
     parentPath = rootProject.projectDir.parentFile.toPath()
 
     includeComponents = this.&includeComponents

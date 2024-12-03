@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
 import org.jxxy.debug.common.databinding.DialogImageClickBinding
+import org.jxxy.debug.corekit.common.BaseActivity
 import org.jxxy.debug.corekit.common.BaseDialog
 import org.jxxy.debug.corekit.util.singleClick
 

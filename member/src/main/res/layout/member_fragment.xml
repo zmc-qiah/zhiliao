@@ -406,13 +406,5 @@
                 app:layout_constraintTop_toTopOf="parent">
             </Button>
         </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
-        <cn.yonghui.hyd.main.ui.cms.activities.seckillactivities.widget.nested.NestedParentRecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/userForumRV"
-            app:layout_constraintTop_toBottomOf="@id/planRCL"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
-        </cn.yonghui.hyd.main.ui.cms.activities.seckillactivities.widget.nested.NestedParentRecyclerView>
     </org.jxxy.debug.corekit.widget.RoundConstraintLayout>
 </org.jxxy.debug.corekit.widget.RoundConstraintLayout>

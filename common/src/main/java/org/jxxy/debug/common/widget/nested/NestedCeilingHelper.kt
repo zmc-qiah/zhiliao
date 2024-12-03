@@ -1,8 +1,9 @@
-package cn.yonghui.hyd.main.ui.cms.activities.seckillactivities.widget.nested
+package org.jxxy.debug.common.widget.nested
 
 import android.util.Log
 import android.view.View
 import org.jxxy.debug.common.R
+
 
 object NestedCeilingHelper {
     /** Log开关  */

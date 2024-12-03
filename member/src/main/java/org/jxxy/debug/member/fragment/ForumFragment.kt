@@ -12,6 +12,7 @@ import org.jxxy.debug.corekit.recyclerview.CommonItemDecoration
 import org.jxxy.debug.corekit.recyclerview.SingleTypeAdapter
 import org.jxxy.debug.corekit.util.gone
 import org.jxxy.debug.corekit.util.toast
+import org.jxxy.debug.member.R
 import org.jxxy.debug.member.bean.Forum
 import org.jxxy.debug.member.databinding.FragmentForumGroupBinding
 import org.jxxy.debug.member.databinding.ItemForumBinding
@@ -43,7 +44,7 @@ class ForumFragment(val type:Int) : BaseFragment<FragmentForumGroupBinding>() {
         }
     }
     var start = 1
-    val page = 6
+    val page = 15
     var isEnd = false
     var flag =false
     val size: Int
@@ -59,6 +60,7 @@ class ForumFragment(val type:Int) : BaseFragment<FragmentForumGroupBinding>() {
     override fun bindLayout(): FragmentForumGroupBinding = FragmentForumGroupBinding.inflate(layoutInflater)
 
     override fun initView() {
+        find.forumRecycleView.setTag(org.jxxy.debug.common.R.id.ceiling_rv,true)
         find.forumRecycleView.adapter = adapter
         find.forumRecycleView.addItemDecoration(CommonItemDecoration(10f))
         find.smartRefreshLayout.setEnableRefresh(false)

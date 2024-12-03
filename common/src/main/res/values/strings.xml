@@ -32,7 +32,7 @@
     <string name="icon_text_think_map">&#xe61e;</string>
     <string name="icon_text_select_all">&#xe60c;</string>
     <string name="icon_text_select_note">&#xe878;</string>
-    <string name="icon_text_select_mark">&#x10035;</string>
+    <string name="icon_text_select_mark"></string>
     <string name="icon_text_select_canal">&#xe677;</string>
     <string name="icon_text_select_search">&#xe752;</string>
 

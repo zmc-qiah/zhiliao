@@ -76,11 +76,9 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
                 error?.message?.apply {
                     toast()
                     if ("账号不存在".equals(this)) {
-                        Log.d(TAG, "subscribeUi: " + "账号不存在")
                         view.phoneET.setTextColor(ResourceUtil.getColor(R.color.red))
                         tempPhone = ""
                     } else if ("密码错误".equals((this))) {
-                        Log.d(TAG, "subscribeUi: " + "密码错误")
                         view.pswET.setTextColor(ResourceUtil.getColor(R.color.red))
                         tempPassword = ""
                     }

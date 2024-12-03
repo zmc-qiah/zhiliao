@@ -1,3 +1,3 @@
-package cn.yonghui.hyd.main.ui.cms.activities.seckillactivities.widget.nested
+package org.jxxy.debug.common.widget.nested
 
 interface NestedChildItemContainer

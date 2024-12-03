@@ -20,6 +20,7 @@ class MemberForumViewHolder(binding: ItemForumInterfaceBinding, val activity: Fr
         view.forumViewPage.adapter = adapter
         val tabList = listOf("圈子消息", "我的动态")
         view.root.setTag(org.jxxy.debug.common.R.id.nested_child_item_container, java.lang.Boolean.TRUE)
+        view.root.setTag(org.jxxy.debug.common.R.id.ceiling_view, true)
         TabLayoutMediator(view.forumTab, view.forumViewPage) { tab, position ->
             val binding = Tab1Binding.inflate(
                 LayoutInflater.from(view.forumTab.context),

@@ -68,7 +68,6 @@
         app:layout_constraintTop_toTopOf="@id/userNameTV"
         app:layout_constraintBottom_toBottomOf="@id/userPhotoIV">
     </TextView>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -222,7 +221,7 @@
             app:layout_constraintRight_toLeftOf="@id/point_icon_3">
         </View>
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <cn.yonghui.hyd.main.ui.cms.activities.seckillactivities.widget.nested.NestedParentRecyclerView
+    <androidx.recyclerview.widget.NestedParentRecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -230,6 +229,5 @@
         android:background="@color/bg_100"
         android:id="@+id/memberRecycleView"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        >
-    </cn.yonghui.hyd.main.ui.cms.activities.seckillactivities.widget.nested.NestedParentRecyclerView>
+        />
 </androidx.constraintlayout.motion.widget.MotionLayout>

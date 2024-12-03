@@ -43,10 +43,13 @@ dependencies {
     api 'com.github.DingMouRen:LayoutManagerGroup:1e6f4f96eb'
     api "androidx.dynamicanimation:dynamicanimation:1.0.0"
     api group: 'io.github.lucksiege', name: 'pictureselector', version: 'v3.11.1'
-    api ('com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer:v8.1.9-release-jitpack'){
+    api ('com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-java:v8.1.6-jitpack'){
         exclude group: 'androidx.appcompat'
         exclude group: 'androidx.core'
     }
+    api 'com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer-exo2:v8.1.6-jitpack'
+    api 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-arm64:v8.1.6-jitpack'
+    api 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-armv7a:v8.1.6-jitpack'
     implementation 'com.github.chrisbanes:PhotoView:2.2.0'
     kapt 'com.google.auto.service:auto-service:1.0-rc6'
     api 'com.google.auto.service:auto-service-annotations:1.0-rc6'

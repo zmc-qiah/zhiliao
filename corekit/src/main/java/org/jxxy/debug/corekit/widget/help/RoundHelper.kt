@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import org.jxxy.debug.corekit.R
 
-class RoundHelper {
+class  RoundHelper {
     private var mContext: Context? = null
     private var mView: View? = null
     private var mPaint: Paint? = null

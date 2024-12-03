@@ -19,16 +19,13 @@
             >
         </org.jxxy.debug.corekit.widget.CommonToolbar>
     </com.google.android.material.appbar.AppBarLayout>
-    <cn.yonghui.hyd.main.ui.cms.activities.seckillactivities.widget.nested.NestedParentRecyclerView
-        android:layout_width="match_parent"
+<org.jxxy.debug.common.widget.nested.NestedParentRecyclerView        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/recycleView"
         android:paddingLeft="12dp"
         android:paddingRight="12dp"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
-    </cn.yonghui.hyd.main.ui.cms.activities.seckillactivities.widget.nested.NestedParentRecyclerView>
-
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

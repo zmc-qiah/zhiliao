@@ -400,7 +400,6 @@ class WaveView(context: Context, attributeSet: AttributeSet? = null) : View(cont
             canvas.drawPath(waveCirclePath, wavePaint)
         }
 
-        //Fixme android6设置Path.op存在明显抖动，因此多画一圈圆环
         val ringWidth = outerRadius - outerStrokeWidth - innerRadius
         ringPaint.strokeWidth = ringWidth / 2
         canvas.drawCircle(centerX.toFloat(), centerY.toFloat(), innerRadius + ringWidth / 4, ringPaint)

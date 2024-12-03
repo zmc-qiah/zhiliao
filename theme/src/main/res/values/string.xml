@@ -32,7 +32,6 @@
     <string name="theme_na">&#xe648;</string>
     <string name="theme_kn">&#xe850;</string>
     <string name="dash_model">qwen-max</string>
-    <string name="dash_key">sk-f472eda122a8411dac7dab7ee0a9eef0</string>
 
     <string-array name="tfe_pe_device_name">
         <item>CPU</item>

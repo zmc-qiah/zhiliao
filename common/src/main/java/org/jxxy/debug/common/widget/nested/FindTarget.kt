@@ -1,4 +1,4 @@
-package cn.yonghui.hyd.main.ui.cms.activities.seckillactivities.widget.nested
+package org.jxxy.debug.common.widget.nested
 
 import android.view.View
 import android.view.ViewGroup

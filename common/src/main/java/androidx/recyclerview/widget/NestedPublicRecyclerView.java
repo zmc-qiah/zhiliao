@@ -7,9 +7,10 @@ import android.widget.OverScroller;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import org.jxxy.debug.common.widget.nested.NestedRecyclerScrollListener;
+
 import java.lang.reflect.Field;
 
-import cn.yonghui.hyd.main.ui.cms.activities.seckillactivities.widget.nested.NestedRecyclerScrollListener;
 
 public class NestedPublicRecyclerView extends RecyclerView {
 

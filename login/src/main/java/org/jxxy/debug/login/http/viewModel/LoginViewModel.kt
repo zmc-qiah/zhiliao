@@ -22,25 +22,11 @@ class LoginViewModel(app: Application) : BaseViewModel(app) {
     val loginLiveData: ResLiveData<LoginRespone?> by lazy { ResLiveData() }
     val registerLiveData: ResLiveData<LoginRespone> by lazy { ResLiveData() }
     fun login(usePhone: String, password: String) {
-        val run = object : Runnable {
-            override fun run() {
-                TODO("Not yet implemented")
-            }
-        }
-        Thread(run).start()
-        run.run()
-        viewModelScope.launch {
-            val login = repository.login(usePhone, password)
-            login?.data?.let {
-                loginLiveData.postValue(Resource.success(it))
-            }
-        }
         request(
             loginLiveData,
             object : BaseLiveDataCallback2<LoginRespone?> {}
         ) {
-            val login = repository.login(usePhone, password)
-            login
+            repository.login(usePhone, password)
         }
     }
     fun register(usePhone: String, password: String) {

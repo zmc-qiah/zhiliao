@@ -32,48 +32,48 @@ class MemberPlanViewHolder(binding: ItemPlanListBinding, private val onClick: (v
                 }
             })
         view.userPlanRV.adapter = planAdapter
-        entity?.let {
+        entity.let {
             view.usePlanBtn.singleClick {
                 onClick(it)
             }
             view.userPlanNameTV.text = it.name
             view.userPlanStartDateTimeTV.text = it.startTime?.let { it.split(" ")[0] }
             view.userPlanEndDateTimeTV.text = it.endTime?.let { it.split(" ")[0] }
-            it.studyEvent?.let {
-                it.forEach {
-                    it.eventTime = it.eventTime?.let { it.split(" ")[0] }
+            try {
+                it.studyEvent?.let {
+                    it.forEach {
+                        it.eventTime = it.eventTime?.let { it.split(" ")[0] }
+                    }
+                    if (it.size == 1) {
+                        it[0].type = 3
+                    } else {
+                        it[0].type = 0
+                        it[it.size - 1].type = 2
+                    }
+                    planAdapter.clearAndAdd(it)
                 }
-                if (it.size == 1) {
-                    it[0].type = 3
-                } else {
-                    it[0].type = 0
-                    it[it.size - 1].type = 2
+                // 0未开始，1进行中，2已完成
+                when (it.state?.toInt()) {
+                    0 -> {
+                        view.userPlanStateIcon.setTextColor(ResourceUtil.getColor(R.color.black))
+                        view.userPlanStateIcon.text = ResourceUtil.getString(R.string.incomplete)
+                        view.userPlanStateIcon.scaleX =0.8f
+                        view.userPlanStateIcon.scaleY =0.8f
+                    }
+                    1 -> {
+                        view.userPlanStateIcon.setTextColor(ResourceUtil.getColor(R.color.task_button))
+                        view.userPlanStateIcon.text = ResourceUtil.getString(R.string.progress)
+                        view.userPlanStateIcon.scaleX =1f
+                        view.userPlanStateIcon.scaleY =1f
+                    }
+                    2 -> {
+                        view.userPlanStateIcon.setTextColor(ResourceUtil.getColor(R.color.green))
+                        view.userPlanStateIcon.text = ResourceUtil.getString(R.string.getData)
+                        view.userPlanStateIcon.scaleX =1f
+                        view.userPlanStateIcon.scaleY =1f
+                    }
                 }
-                planAdapter.clearAndAdd(it)
-            }
-            (context as? LifecycleCoroutineScope)?.let {
-
-            }
-            // 0未开始，1进行中，2已完成
-            when (it.state?.toInt()) {
-                0 -> {
-                    view.userPlanStateIcon.setTextColor(ResourceUtil.getColor(R.color.black))
-                    view.userPlanStateIcon.text = ResourceUtil.getString(R.string.incomplete)
-                    view.userPlanStateIcon.scaleX =0.8f
-                    view.userPlanStateIcon.scaleY =0.8f
-                }
-                1 -> {
-                    view.userPlanStateIcon.setTextColor(ResourceUtil.getColor(R.color.task_button))
-                    view.userPlanStateIcon.text = ResourceUtil.getString(R.string.progress)
-                    view.userPlanStateIcon.scaleX =1f
-                    view.userPlanStateIcon.scaleY =1f
-                }
-                2 -> {
-                    view.userPlanStateIcon.setTextColor(ResourceUtil.getColor(R.color.green))
-                    view.userPlanStateIcon.text = ResourceUtil.getString(R.string.getData)
-                    view.userPlanStateIcon.scaleX =1f
-                    view.userPlanStateIcon.scaleY =1f
-                }
+            } catch (_ : Exception) {
             }
         }
     }

@@ -41,3 +41,5 @@ node_modules/
 *.bundle.meta
 package.json
 package-lock.json
+
+/theme/src/main/res/values/key.xml

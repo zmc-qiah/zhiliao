@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <cn.yonghui.hyd.main.ui.cms.activities.seckillactivities.widget.nested.NestedChildRecyclerView
+    <org.jxxy.debug.common.widget.nested.NestedChildRecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/memberDataRecyclerView"
@@ -15,7 +15,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="2"
-        >
-    </cn.yonghui.hyd.main.ui.cms.activities.seckillactivities.widget.nested.NestedChildRecyclerView>
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

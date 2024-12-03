@@ -1,4 +1,4 @@
-package cn.yonghui.hyd.main.ui.cms.activities.seckillactivities.widget.nested
+package org.jxxy.debug.common.widget.nested
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -12,8 +12,7 @@ import androidx.core.view.NestedScrollingParentHelper
 import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.NestedPublicRecyclerView
 import androidx.recyclerview.widget.RecyclerView
-import cn.yonghui.hyd.lib.helper.util.FlingHelper
-import cn.yonghui.hyd.main.ui.cms.activities.seckillactivities.widget.nested.FindTarget.findChildScrollTarget
+import org.jxxy.debug.common.widget.nested.FindTarget.findChildScrollTarget
 import kotlin.math.roundToInt
 
 /** 嵌套滑动的父View  */
@@ -93,11 +92,11 @@ class NestedParentRecyclerView @JvmOverloads constructor(
 
     override fun onInterceptTouchEvent(e: MotionEvent): Boolean {
         val isTouchInContent = (
-            mContentView != null &&
-                // 判断是否在区域内，如不在子View，则直接由自身处理
-                e.y > mContentView!!.top &&
-                e.y < mContentView!!.bottom
-            )
+                mContentView != null &&
+                        // 判断是否在区域内，如不在子View，则直接由自身处理
+                        e.y > mContentView!!.top &&
+                        e.y < mContentView!!.bottom
+                )
         val targetView: View? = if (isTouchInContent) findChildScrollTarget(mContentView) else null
         var isTouchInChildArea = false
         if (targetView != null) {
@@ -354,17 +353,17 @@ class NestedParentRecyclerView @JvmOverloads constructor(
                 val range = computeVerticalScrollRange() - computeVerticalScrollExtent()
                 log(
                     "onNestedPreScroll dy:" +
-                        dy +
-                        ", consumedY: " +
-                        consumed[1] +
-                        ", type:" +
-                        type +
-                        ", isScrollEnd: " +
-                        isScrollEnd +
-                        ", offset:" +
-                        offset +
-                        ", range:" +
-                        range
+                            dy +
+                            ", consumedY: " +
+                            consumed[1] +
+                            ", type:" +
+                            type +
+                            ", isScrollEnd: " +
+                            isScrollEnd +
+                            ", offset:" +
+                            offset +
+                            ", range:" +
+                            range
                 )
             }
         } else {
@@ -373,15 +372,15 @@ class NestedParentRecyclerView @JvmOverloads constructor(
                 val range = computeVerticalScrollRange() - computeVerticalScrollExtent()
                 log(
                     "onNestedPreScroll not dy:" +
-                        dy +
-                        ", type:" +
-                        type +
-                        ", isScrollEnd: " +
-                        isScrollEnd +
-                        ", offset:" +
-                        offset +
-                        ", range:" +
-                        range
+                            dy +
+                            ", type:" +
+                            type +
+                            ", isScrollEnd: " +
+                            isScrollEnd +
+                            ", offset:" +
+                            offset +
+                            ", range:" +
+                            range
                 )
             }
         }
@@ -461,13 +460,13 @@ class NestedParentRecyclerView @JvmOverloads constructor(
         if (NestedCeilingHelper.DEBUG) {
             log(
                 "onNestedScrollInternal dyUnconsumed:" +
-                    dyUnconsumed +
-                    ", consumedY:" +
-                    consumedY +
-                    ", myUnconsumedY:" +
-                    myUnconsumedY +
-                    ", type:" +
-                    type
+                        dyUnconsumed +
+                        ", consumedY:" +
+                        consumedY +
+                        ", myUnconsumedY:" +
+                        myUnconsumedY +
+                        ", type:" +
+                        type
             )
         }
         if (dyUnconsumed < 0 && type == ViewCompat.TYPE_TOUCH) {
@@ -493,9 +492,9 @@ class NestedParentRecyclerView @JvmOverloads constructor(
             if (NestedCeilingHelper.DEBUG) {
                 log(
                     "onNestedScrollInternal start fling from child, absVelocity:" +
-                        absVelocity +
-                        ", myVelocity:" +
-                        myVelocity
+                            absVelocity +
+                            ", myVelocity:" +
+                            myVelocity
                 )
             }
         }
