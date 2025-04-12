@@ -17,14 +17,17 @@ import com.tencent.mm.opensdk.openapi.WXAPIFactory
 import com.tencent.smtt.export.external.TbsCoreSettings
 import com.tencent.smtt.sdk.QbSdk
 import com.tencent.smtt.sdk.TbsListener
-import kotlinx.coroutines.*
+import kotlinx.coroutines.CoroutineExceptionHandler
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import org.jxxy.debug.common.util.awaitResumed
 import org.jxxy.debug.corekit.common.BaseApplication
 import org.jxxy.debug.corekit.http.HttpManager
 import org.jxxy.debug.corekit.mmkv.PersistenceUtil
 import org.jxxy.debug.push.card.PushCardManager
-import org.jxxy.debug.theme.floatball.service.SuspendWindowService
-import org.jxxy.debug.theme.floatball.utils.Utils
 import java.lang.ref.WeakReference
 
 // 这个非必要不要动

@@ -1,6 +1,5 @@
 package org.jxxy.debug.activity
 
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.lifecycleScope
@@ -8,16 +7,12 @@ import com.igexin.sdk.PushManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import navigation
 import org.jxxy.debug.R
 import org.jxxy.debug.bean.TabIconBean
 import org.jxxy.debug.classification.fragment.ClassificationFragment
-import org.jxxy.debug.common.bean.Node
-import org.jxxy.debug.common.scheme.Scheme
 import org.jxxy.debug.common.service.isLogin
 import org.jxxy.debug.common.util.getHeight
 import org.jxxy.debug.corekit.common.BaseActivity
-import org.jxxy.debug.corekit.gson.GsonManager
 import org.jxxy.debug.corekit.http.TokenManager
 import org.jxxy.debug.corekit.util.ResourceUtil
 import org.jxxy.debug.corekit.util.nullOrNot
@@ -28,7 +23,6 @@ import org.jxxy.debug.home.Fragment.HomeFragment
 import org.jxxy.debug.login.http.repository.LoginRepository
 import org.jxxy.debug.member.fragment.MemberRecycleViewFragment
 import org.jxxy.debug.test.fragment.fragment.TestFragment
-import org.jxxy.debug.theme.fragment.ThemeFragment
 
 
 // 你要是自己写activity运行不了，记得去AndroidManifest.xml看看有没有添加进去
@@ -37,7 +31,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     private var classificationFragment: ClassificationFragment? = null
     private var homeFragment: HomeFragment? = null
     private var testFragment: TestFragment? = null
-    private var themeFragment: ThemeFragment? = null
     private val tabList: List<TabIconBean> by lazy {
         listOf(TabIconBean(view.homeTab, view.homeTabIcon, view.homeTabTv), TabIconBean(view.categoryTab, view.categoryTabIcon, view.categoryTabTv), TabIconBean(view.topicTab, view.topicTabIcon, view.topicTabTv), TabIconBean(view.memberTab, view.memberTabIcon, view.memberTabTv))
     }
@@ -48,8 +41,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun initView() {
         var height = getHeight()
-        val node = Node("记录灵光瞬间")
-        Log.d("aaaaaaaaaaaaaaaaaa", "initView:aaxacsa${GsonManager.instance.gson.toJson(node)} ")
         height -= view.bar.layoutParams.height
         view.tabFragment.layoutParams.height = height + 5
         tabList.forEach {
@@ -91,11 +82,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             0 -> {
                 homeFragment?.let { fragmentTransaction.hide(it) }
             }
-            -1 ->{
-                themeFragment?.let {
-                    fragmentTransaction.hide(it)
-                }
-            }
+            -1 -> {}
         }
         tabList.forEach {
             it.icon.setTextColor(ResourceUtil.getColor(R.color.black))
@@ -144,13 +131,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                 selected = 3
             }
             R.id.themeTab ->{
-                themeFragment.nullOrNot({
-                    themeFragment = ThemeFragment()
-                    fragmentTransaction.add(R.id.tabFragment, themeFragment!!)
-                }, {
-                    fragmentTransaction.show(it)
-                })
-                selected = -1
+                toast("theme 模块被移除")
             }
         }
         tabList.getOrNull(selected)?.let {

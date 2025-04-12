@@ -13,15 +13,3 @@ interface AiService {
     fun goKnowledgeBase(context:Context)
     fun goGuessing(context:Context)
 }
-
-fun goAiPaint(){
-
-}
-
-fun goAiAdv(){
-
-}
-
-fun goAiEmo(){
-
-}

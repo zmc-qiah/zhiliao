@@ -124,9 +124,9 @@ ext {
                     index       : 6,
                     module      : 'app',
                     localEnable : true,
-                    dependencies: [1, 2, 3, 4, 5,7,8,9,10,11,12,13,14,15,16],
+                    dependencies: [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 13, 14, 15],
                     // 主模块的需要设置includes标签，以进行include，同时也是主入口的标志
-                    includes    : [0, 1, 2, 3, 4, 5,7,8,9,10,11,12,13,14,15,16]
+                    includes    : [0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 13, 14, 15]
             ],
             [
                     index       : 7,
@@ -162,7 +162,7 @@ ext {
                     index       : 12,
                     module      : 'theme',
                     localEnable : true,
-                    dependencies: [1,16]
+                    dependencies: [1, 16]
             ],
             [
                     index       : 13,
@@ -187,8 +187,6 @@ ext {
                     module      : 'openCV',
                     localEnable : true,
             ]
-
-
     ]
 
     parentPath = rootProject.projectDir.parentFile.toPath()
