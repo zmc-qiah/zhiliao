@@ -2,7 +2,6 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'org.jetbrains.kotlin.kapt'
-    id 'com.chaquo.python'
 }
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -21,18 +20,6 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", "TAG", "\"debugroom\"")
-        ndk {
-            abiFilters ("armeabi-v7a","arm64-v8a") //, , "x86", "x86_64"
-        }
-        python {
-            buildPython PYTHON_ADDRESS
-            version PYTHON_VERSION
-            pip{
-                install "numpy"
-                install  "opencv-python==4.5.1.48"
-                install "tensorflow==2.1.0"
-            }
-        }
     }
 
     buildTypes {
@@ -55,7 +42,6 @@ android {
 def MODULE_NAME = "app"
 
 dependencies {
-    implementation files('..\\theme\\libs\\Msc.jar')
     kapt 'com.google.auto.service:auto-service:1.0-rc6'
     importDependencies(MODULE_NAME, dependencies)
     debugImplementation "com.bytedance.tools.codelocator:codelocator-core:2.0.0"

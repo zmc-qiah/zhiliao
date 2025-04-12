@@ -93,7 +93,6 @@ class MyApplication : BaseApplication() {
             override fun onActivityDestroyed(activity: Activity) {
             }
         })
-        Thread(PythonThread(context())).start()
     }
     private fun webSdkInit() {
         // 在调用TBS初始化、创建WebView之前进行如下配置

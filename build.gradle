@@ -21,7 +21,6 @@ buildscript {
         classpath 'com.android.tools.build:gradle:7.0.3'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
-        classpath "com.chaquo.python:gradle:13.0.0"
     }
 }
 allprojects {
@@ -42,11 +41,9 @@ allprojects {
             url "http://dl.bintray.com/jlmd/maven"
             allowInsecureProtocol true
         }
-
         maven {
             url "https://mvn.getui.com/nexus/content/repositories/releases/"
         }
-
     }
 }
 task clean(type: Delete) {
