@@ -59,5 +59,6 @@ dependencies {
     kapt 'com.google.auto.service:auto-service:1.0-rc6'
     importDependencies(MODULE_NAME, dependencies)
     debugImplementation "com.bytedance.tools.codelocator:codelocator-core:2.0.0"
-    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+// https://mvnrepository.com/artifact/com.tencent.mm.opensdk/wechat-sdk-android-without-mta
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.8.0'
 }
